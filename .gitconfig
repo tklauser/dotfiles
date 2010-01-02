@@ -1,0 +1,22 @@
+[user]
+	name = Tobias Klauser
+	email = tklauser@distanz.ch
+
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+	d = diff
+	ds = diff --stat
+	lp = log -p
+
+[color]
+	ui = true
+	diff = auto
+	branch = auto
+	status = auto
+[color "diff"]
+	whitespace = red reverse
+[core]
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol

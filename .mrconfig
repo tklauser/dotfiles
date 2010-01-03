@@ -1,0 +1,14 @@
+[DEFAULT]
+include = cat /usr/share/mr/git-fake-bare
+
+[src/dotfiles/mr.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/mr.git' 'mr.git' '../../../'
+
+[src/dotfiles/git.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
+
+[src/dotfiles/screen.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
+
+[src/dotfiles/vim.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/vim.git' 'vim.git' '../../../'

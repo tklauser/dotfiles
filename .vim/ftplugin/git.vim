@@ -32,7 +32,7 @@ if exists("b:did_ftplugin") | finish | endif
 
 let b:did_ftplugin = 1
 
-setlocal tw=74
+setlocal tw=72
 setlocal nowarn nowb
 
 function! Git_diff_windows(vertsplit, auto, opts)

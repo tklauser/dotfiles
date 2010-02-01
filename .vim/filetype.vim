@@ -2076,6 +2076,9 @@ au BufNewFile,BufRead *.va,*.vams		setf verilogams
 au BufNewFile,BufRead *.hdl,*.vhd,*.vhdl,*.vbe,*.vst  setf vhdl
 au BufNewFile,BufRead *.vhdl_[0-9]*		call s:StarSetf('vhdl')
 
+" System Verilog
+au BufNewFile,BufRead *.sv			setf systemverilog
+
 " Vim script
 au BufNewFile,BufRead *.vim,*.vba,.exrc,_exrc	setf vim
 

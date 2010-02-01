@@ -1,0 +1,27 @@
+# .screenrc
+# Tobias Klauser <tklauser@access.unizh.ch>
+# $Id: screenrc,v 1.12 2006/03/25 18:00:04 tklauser Exp $
+
+startup_message off
+
+autodetach on
+
+#backtick 1 10 10 /home/tklauser/bin/bat.sh
+#backtick 2 10 10 /home/tklauser/bin/yacpi -t
+#backtick 2 10 10 cpufreq-info -fm
+#backtick 1 10 10 /home/tklauser/bin/statusbar
+
+# set status lines
+#caption always "%{bw}%w%{wk} %-77= %1`"
+caption always "%{wk}%H%{wk} | %{bw}%w%{wk} %-41= | %{rk}%l%{wk} | %{gk}%D %d.%m.%Y %0c%{wk}"
+#caption always "%{+b bk}$USER@%{wk}%H%{gk} | %c %{yk}%D %d.%m.%Y | %{rk}(load: %l | cpu: %1` | acpi: %2`)"
+#caption always "%{+b bk}$USER%{wk}%H: screen%{gk} |%c %{yk}%d.%m.%Y | %{rk}(system load: %l)%-21=%{wk}%D %d.%m.%Y %0c"
+#caption always "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %{rw}%n%f %t %{bk} | %?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%? | %{rk} Load: %l %{wk}"
+#hardstatus alwayslastline "%{wr}%n%f %t %{kw} | %?%-Lw%?%{wb}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %{wk}"
+
+# keybindings
+bind i screen -t 'irssi'	0 irssi
+bind m screen -t 'mutt'		1 mutt
+bind v screen -t 'vim'		2 vim
+
+#bind p paste .

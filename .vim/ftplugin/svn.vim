@@ -31,7 +31,7 @@ function! Svn_diff_windows()
             let list_of_files = list_of_files . ' '.file
         endif
 	if line =~ '^A'
-            let file = substitute(line, '\v^A\s*(.*)\s*$', '\1', '')
+            let file = substitute(line, '\v^A\s*[+]*\s*(.*)\s*$', '\1', '')
             let list_of_files = list_of_files . ' '.file
 	endif
 

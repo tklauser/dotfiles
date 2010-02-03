@@ -88,11 +88,11 @@ let mapleader=","
 nmap <C-x>n :set invnumber<CR>
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
-map <C-x>s ^iSigned-off-by: Tobias Klauser <tklauser@distanz.ch><CR><ESC>^
-map! <C-x>s Signed-off-by: Tobias Klauser <tklauser@distanz.ch><CR>
+map <C-x>s ^iSigned-off-by: Tobias Klauser <<C-r>=$GIT_AUTHOR_EMAIL<CR>><ESC>^
+map! <C-x>s Signed-off-by: Tobias Klauser <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR>
 
-map <C-x>c i<C-R>=strftime("%F %R")<CR> Tobias Klauser <tklauser@access.unizh.ch><CR><TAB>* <ESC>
-map! <C-x>c <C-R>=strftime("%F %R")<CR> Tobias Klauser <tklauser@access.unizh.ch><CR><TAB>* 
+map <C-x>c i<C-R>=strftime("%F %R")<CR> Tobias Klauser <tklauser@distanz.ch><CR><TAB>* <ESC>
+map! <C-x>c <C-R>=strftime("%F %R")<CR> Tobias Klauser <tklauser@distanz.ch><CR><TAB>* 
 
 map <C-x>f ^iFrom: Tobias Klauser <tklauser@distanz.ch><CR><ESC>^
 map! <C-x>f From: Tobias Klauser <tklauser@distanz.ch><CR>

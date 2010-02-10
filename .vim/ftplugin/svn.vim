@@ -29,9 +29,11 @@ function! Svn_diff_windows()
         if line =~ '^M'
             let file = substitute(line, '\v^MM?\s*(.*)\s*$', '\1', '')
             let list_of_files = list_of_files . ' '.file
-        endif
-	if line =~ '^A'
-            let file = substitute(line, '\v^A\s*[+]*\s*(.*)\s*$', '\1', '')
+	elseif line =~ '^A'
+            let file = substitute(line, '\v^AM?\s*[+]*\s*(.*)\s*$', '\1', '')
+            let list_of_files = list_of_files . ' '.file
+	elseif line =~ '^D'
+            let file = substitute(line, '\v^D\s*(.*)\s*$', '\1', '')
             let list_of_files = list_of_files . ' '.file
 	endif
 

@@ -16,4 +16,7 @@ checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/do
 [src/dotfiles/quotes.git]
 checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/quotes.git' 'quotes.git' '../../../'
 
+[src/dotfiles/zsh.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/zsh.git' 'zsh.git' '../../../'
+
 # vim:tw=0

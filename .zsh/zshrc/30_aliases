@@ -1,0 +1,37 @@
+# zshrc/30_aliases
+#
+# Define command aliases
+#
+# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+# TODO: look at the salias function in .zshrc.grml
+
+# command aliases
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -la'
+alias cd..='cd ..'
+alias ...='cd ../../'
+alias cal='cal -m'
+alias egrep='egrep --color=auto'
+alias grep='grep --color=auto'
+alias m='mount'
+alias u='umount'
+
+# no spelling correction for these
+alias cp='nocorrect cp'
+alias ln='nocorrect ln'
+alias mkdir='nocorrect mkdir'
+alias mv='nocorrect mv'
+alias rm='nocorrect rm'
+
+# get top 10 shell commands
+alias top10='print -l ? ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+
+# bofh fortunes
+alias bofh='fortune bofh-excuses'
+
+# vim:ft=zsh

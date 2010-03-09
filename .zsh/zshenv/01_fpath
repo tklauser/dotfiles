@@ -1,0 +1,12 @@
+# zshenv/01_fpath
+#
+# Add local functions directory to $fpath
+#
+# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+fpath=($ZDOTDIR/func $fpath)
+
+# vim:ft=zsh

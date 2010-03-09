@@ -1,0 +1,18 @@
+# zshenv/80_debian
+#
+# Set variables related to Debian
+#
+# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+export DEBFULLNAME='Tobias Klauser'
+export DEBEMAIL='tklauser@distanz.ch'
+
+# set variable debian_chroot if running in a chroot with /etc/debian_chroot
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+  export debian_chroot="$(</etc/debian_chroot)"
+fi
+
+# vim:ft=zsh

@@ -1,4 +1,6 @@
-# .zshenv
+# logout/99_cls
+#
+# clear the screen on exit
 #
 # Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
 #
@@ -6,3 +8,5 @@
 #
 # Based on the zsh setup by martin f. krafft which can be found at:
 # git://git.madduck.net/etc/zsh.git
+
+clear

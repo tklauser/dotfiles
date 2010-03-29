@@ -1,8 +1,8 @@
 [DEFAULT]
 include = cat /usr/share/mr/git-fake-bare
 
-#[src/dotfiles/git.git]
-#checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
+[src/dotfiles/git.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
 
 [src/dotfiles/minicom.git]
 checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/minicom.git' 'minicom.git' '../../../'

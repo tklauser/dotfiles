@@ -23,3 +23,12 @@
 
 [color "diff"]
 	whitespace = red reverse
+
+[push]
+	default = matching
+
+[merge]
+	tool = vimdiff
+
+[sendemail]
+	smtpserver = smtp.zhaw.ch

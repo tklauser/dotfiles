@@ -1,23 +1,26 @@
 [DEFAULT]
 include = cat /usr/share/mr/git-fake-bare
 
-[src/dotfiles/mr.git]
-checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/mr.git' 'mr.git' '../../../'
-
 #[src/dotfiles/git.git]
 #checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
 
-[src/dotfiles/screen.git]
-checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/screen.git' 'screen.git' '../../../'
+[src/dotfiles/minicom.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/minicom.git' 'minicom.git' '../../../'
 
-[src/dotfiles/vim.git]
-checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/vim.git' 'vim.git' '../../../'
+[src/dotfiles/mr.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/mr.git' 'mr.git' '../../../'
 
 [src/dotfiles/quotes.git]
 checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/quotes.git' 'quotes.git' '../../../'
 
+[src/dotfiles/screen.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/screen.git' 'screen.git' '../../../'
+
 [src/dotfiles/sigs.git]
 checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/sigs.git' 'sigs.git' '../../../'
+
+[src/dotfiles/vim.git]
+checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/vim.git' 'vim.git' '../../../'
 
 [src/dotfiles/zsh.git]
 checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/zsh.git' 'zsh.git' '../../../'

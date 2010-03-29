@@ -1,0 +1,28 @@
+# zshenv/80_go
+#
+# Set variables related to the Go programming language
+#
+# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+_GOROOT=$HOME/src/go
+
+if [ -d $_GOROOT ] ; then
+	export GOROOT=$_GOROOT
+	arch="$(uname -m)"
+	case "$arch" in
+    x86_64) export GOARCH="amd64";;
+    i*86)   export GOARCH="386";;
+    *)      export GOARCH="unsupported";;
+	esac
+  os="$(uname)"
+  case "$os" in
+    Linux)  export GOOS="linux";;
+    Darwin) export GOOS="darwin";;
+    *)      export GOOS="unsupported";;
+  esac
+fi
+
+# vim:ft=zsh

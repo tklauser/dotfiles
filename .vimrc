@@ -91,6 +91,9 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 map <C-x>s ^iSigned-off-by: Tobias Klauser <<C-r>=$GIT_AUTHOR_EMAIL<CR>><ESC>^
 map! <C-x>s Signed-off-by: Tobias Klauser <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR>
 
+map <C-x>a ^iAcked-by: Tobias Klauser <<C-r>=$GIT_AUTHOR_EMAIL<CR>><ESC>^
+map! <C-x>a Acked-by: Tobias Klauser <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR>
+
 map <C-x>y ^iCopyright (C) <C-R>=strftime("%Y")<CR> Tobias Klauser <tklauser@distanz.ch><CR><ESC>^
 map! <C-x>y Copyright (C) <C-R>=strftime("%Y")<CR> Tobias Klauser <tklauser@distanz.ch><CR>
 

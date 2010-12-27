@@ -1,15 +1,8 @@
 # .screenrc
-# Tobias Klauser <tklauser@access.unizh.ch>
-# $Id: screenrc,v 1.12 2006/03/25 18:00:04 tklauser Exp $
 
 startup_message off
 
 autodetach on
-
-#backtick 1 10 10 /home/tklauser/bin/bat.sh
-#backtick 2 10 10 /home/tklauser/bin/yacpi -t
-#backtick 2 10 10 cpufreq-info -fm
-#backtick 1 10 10 /home/tklauser/bin/statusbar
 
 # set status lines
 #caption always "%{bw}%w%{wk} %-77= %1`"

@@ -1,0 +1,16 @@
+# zshenv/00_dirs
+#
+# Store some often used directory paths in variables
+#
+# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+#
+
+export BINDIR=$HOME/bin
+export NIOS2NOMMUBINDIR=/opt/nios2/bin
+export NIOS2MMUBINDIR=$HOME/src/nios2-linux/toolchain-mmu/x86-linux2/bin
+export ALTERADIR=/opt/altera9.1
+
+# vim:ft=zsh

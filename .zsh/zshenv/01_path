@@ -36,6 +36,7 @@ path_append()
 path_prepend $HOME/bin
 path_append /opt/nios2/bin
 path_append /opt/nios2mmu/x86-linux2/bin
+path_append /opt/codesourcery/arm-2010.09
 path_append /opt/android-sdk-linux_86
 
 # vim:ft=zsh

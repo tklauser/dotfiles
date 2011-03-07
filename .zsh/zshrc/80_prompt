@@ -13,6 +13,8 @@ if autoload promptinit && promptinit 2>/dev/null ; then
   promptinit
 fi
 
+setopt prompt_subst
+
 EXITCODE="%(?..%?%1v )"
 
 # set variable debian_chroot if running in a chroot with /etc/debian_chroot
@@ -25,8 +27,10 @@ if [[ "$TERM" == dumb ]] ; then
   PROMPT="${EXITCODE}${debian_chroot:+($debian_chroot)}%n@%m%40<...<%B%~%b%<< %# "
 else
   if (( EUID != 0 )); then
-    PROMPT="${RED}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${RED}%n${WHITE}@%m${NO_COLOUR}:%40<...<%B%~%b%<< %# " # primary prompt string
+    PROMPT="${RED}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${RED}%n${WHITE}@%m${NO_COLOUR}:%40<...<%B%~%b%<< "'${vcs_info_msg_0_}'"%# " # primary prompt string
   else
     PROMPT="${BLUE}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${RED}%n${NO_COLOUR}@%m%40<...<%B%~%b%<< %# " # primary prompt string
   fi
 fi
+
+# vim:ft=zsh

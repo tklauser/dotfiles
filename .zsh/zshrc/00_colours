@@ -1,6 +1,6 @@
 # zshrc/00_colours
 #
-# Colours
+# Set up colours
 #
 # Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
 #
@@ -24,3 +24,5 @@ else
   WHITE=$'%{\e[1;37m%}'
   NO_COLOUR=$'%{\e[0m%}'
 fi
+
+# vim:ft=zsh

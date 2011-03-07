@@ -1,0 +1,26 @@
+# zshrc/00_colours
+#
+# Colours
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+#
+# Based on the zsh setup by martin f. krafft which can be found at:
+# git://git.madduck.net/etc/zsh.git
+
+if autoload colors && colors 2>/dev/null ; then
+  BLUE="%{${fg[blue]}%}"
+  RED="%{${fg_bold[red]}%}"
+  GREEN="%{${fg[green]}%}"
+  CYAN="%{${fg[cyan]}%}"
+  WHITE="%{${fg_bold[white]}%}"
+  NO_COLOUR="%{${reset_color}%}"
+else
+  BLUE=$'%{\e[1;34m%}'
+  RED=$'%{\e[1;31m%}'
+  GREEN=$'%{\e[1;32m%}'
+  CYAN=$'%{\e[1;36m%}'
+  WHITE=$'%{\e[1;37m%}'
+  NO_COLOUR=$'%{\e[0m%}'
+fi

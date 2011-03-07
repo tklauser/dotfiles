@@ -1,0 +1,29 @@
+# zshrc/80_bindkeys
+#
+# defines key bindings (taken from grml zshrc)
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+# use emacs keybindings by default (strange, I know)
+bindkey -e
+# use vi keybindings
+# bindkey -v
+
+# see man zshzle for more information on zsh command line editor
+
+bindkey '\e[1~' beginning-of-line       # home
+bindkey '\e[4~' end-of-line             # end
+bindkey '\e[A'  up-line-or-search       # cursor up
+bindkey '\e[B'  down-line-or-search     # cursor down
+
+# if terminal type is set to 'rxvt':
+bindkey '\e[7~' beginning-of-line       # home
+bindkey '\e[8~' end-of-line             # end
+
+# allow for better ad-hoc multiline editing
+bindkey '\eq' push-line-or-edit
+
+# vim:ft=zsh

@@ -1,6 +1,6 @@
-# .zshenv
+# .zshrc
 #
-# Base zshenv file which simply delegates to files in $ZDOTDIR
+# Base zshrc file which simply delegates to files in $ZDOTDIR
 #
 # Copyright © 2010–2011 Tobias Klauser <tklauser@distanz.ch>
 #
@@ -10,4 +10,4 @@
 # git://git.madduck.net/etc/zsh.git
 
 ZDOTDIR=$HOME/.zsh
-[ -f $ZDOTDIR/.zshenv ] && . $ZDOTDIR/.zshenv
+[ -f $ZDOTDIR/.zshrc ] && . $ZDOTDIR/.zshrc

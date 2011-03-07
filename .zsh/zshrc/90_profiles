@@ -1,0 +1,52 @@
+# zshrc/90_profiles
+#
+# set up directory specific variables and options
+#
+# http://michael-prokop.at/blog/2009/05/30/directory-specific-shell-configuration-with-zsh
+#
+# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+zstyle ':chpwd:profiles:/home/tklauser/src/nios2-linux(|/|/*)'	    profile nios2linux
+zstyle ':chpwd:profiles:/home/tklauser/projects/sinet(|/|/*)'	      profile sinet
+zstyle ':chpwd:profiles:/home/tklauser/src/linux-2.6(|/|/*)'        profile linux26
+
+chpwd_profile_nios2linux()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: $profile"
+
+	export GIT_AUTHOR_EMAIL="klto@zhaw.ch"
+	export GIT_COMMITTER_EMAIL="klto@zhaw.ch"
+}
+
+chpwd_profile_sinet()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: $profile"
+
+	export GIT_AUTHOR_EMAIL="klto@zhaw.ch"
+	export GIT_COMMITTER_EMAIL="klto@zhaw.ch"
+}
+
+chpwd_profile_hdoip()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: $profile"
+
+	export GIT_AUTHOR_EMAIL="klto@zhaw.ch"
+	export GIT_COMMITTER_EMAIL="klto@zhaw.ch"
+}
+
+chpwd_profile_linux26()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: $profile"
+
+	export GIT_AUTHOR_EMAIL="tklauser@distanz.ch"
+	export GIT_COMMITTER_EMAIL="tklauser@distanz.ch"
+}
+
+# vim:ft=zsh

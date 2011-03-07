@@ -1,0 +1,20 @@
+# zshenv/99_altera
+#
+# set up Altera specific variables
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+if [ -d $ALTERADIR ] ; then
+  export LM_LICENSE_FILE=7172@rizzo.zhwin.ch
+  export QUARTUS_64BIT=0
+  export SOPC_KIT_NIOS2=$ALTERADIR/nios2eds
+  export SOPC_BUILDER_PATH=$ALTERADIR/nios2eds:$ALTERADIR/ip/ddr_ddr2_sdram/lib/sopc_builder:$ALTERADIR/ip/pci_compiler/lib/sopc_builder
+  export QUARTUS_ROOTDIR=$ALTERADIR/quartus
+  export SOPC_BUILDER_PATH_80=$ALTERADIR/nios2eds
+  export PATH=$PATH:$ALTERADIR/quartus/bin:$ALTERADIR/nios2eds/bin:$ALTERADIR/quartus/linux:$ALTERADIR/nios2eds/bin/nios2-gnutools/H-i686-pc-linux-gnu/bin:$ALTERADIR/quartus/sopc_builder/bin
+fi
+
+# vim:ft=zsh

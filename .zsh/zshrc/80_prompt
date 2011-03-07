@@ -9,6 +9,10 @@
 # Based on the zsh setup by martin f. krafft which can be found at:
 # git://git.madduck.net/etc/zsh.git
 
+if autoload promptinit && promptinit 2>/dev/null ; then
+  promptinit
+fi
+
 EXITCODE="%(?..%?%1v )"
 
 # set variable debian_chroot if running in a chroot with /etc/debian_chroot

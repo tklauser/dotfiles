@@ -34,4 +34,9 @@ alias top10='print -l ? ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 # bofh fortunes
 alias bofh='fortune bofh-excuses'
 
+# host aliases
+alias distanz="ssh distanz.ch -t \"screen -dR\""
+alias sym=distanz
+alias lema="ssh lema.distanz.ch -t \"screen -dR\""
+
 # vim:ft=zsh

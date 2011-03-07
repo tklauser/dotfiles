@@ -1,0 +1,23 @@
+# zshrc/70_vcs_info
+#
+# set up vcs_info
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' actionformats \
+      '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats       \
+      '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+
+# disable some vcs I don't use
+zstyle ':vcs_info:*' disable cdv darcs mtn svk p4 tla
+
+precmd_functions+=vcs_info
+
+# vim:ft=zsh

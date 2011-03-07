@@ -1,0 +1,26 @@
+# zshrc/40_history
+#
+# Set up command line history
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=5000
+SAVEHIST=$HISTSIZE
+
+# append history list to the history file (think multiple zsh sessions)
+setopt append_history
+
+# ignore duplicates
+setopt hist_ignore_dups
+
+# don't store commands starting with a space in the history file
+setopt hist_ignore_space
+
+# remove superfluous blanks from each command line
+setopt hist_reduce_blanks
+
+# vim:ft=zsh

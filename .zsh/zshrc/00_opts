@@ -1,0 +1,17 @@
+# zshrc/00_opts
+#
+# Set up important options
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+# if a command is issued that can't be executed as a normal command, and the
+# command is the name of a directory, perform the cd command to that directory
+setopt auto_cd
+
+# Silence!
+setopt nobeep
+
+# vim:ft=zsh

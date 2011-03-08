@@ -1,0 +1,74 @@
+# zshrc/80_xtermtitle
+#
+# Fancy setting of the xterm title
+#
+# Based on the grml zshrc. Also see http://zshwiki.org/home/examples/hardstatus
+#
+# Copyright © 2011 Tobias Klauser
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+#
+
+__ESC_print () {
+  __info_print $'\ek' $'\e\\' "$@"
+}
+
+__set_title () {
+  __info_print  $'\e]0;' $'\a' "$@"
+}
+
+__info_print () {
+  local esc_begin esc_end
+  esc_begin="$1"
+  esc_end="$2"
+  shift 2
+  printf '%s' ${esc_begin}
+  for item in "$@" ; do
+    printf '%s ' "$item"
+  done
+  printf '%s' "${esc_end}"
+}
+
+_set_plain_xterm_title() {
+  if [[ $TERM == screen* ]] ; then
+    if [[ -n ${vcs_info_msg_1_} ]] ; then
+      __ESC_print ${vcs_info_msg_1_}
+    else
+      __ESC_print "zsh"
+    fi
+  fi
+
+  # adjust title of xterm
+  # see http://www.faqs.org/docs/Linux-mini/Xterm-Title.html
+  case $TERM in
+    (xterm*|rxvt*)
+      __set_title ${(%):-"%n@%m: %~"}
+      ;;
+  esac
+}
+precmd_functions+=_set_plain_xterm_title
+
+_set_cmd_xterm_title () {
+  # set hostname if not running on localhost
+  if [[ -n "$HOSTNAME" ]] && [[ "$HOSTNAME" != $(hostname) ]] ; then
+    NAME="@$HOSTNAME"
+  fi
+
+  # get the name of the program currently running and hostname of local machine
+  # set screen window title if running in a screen
+  if [[ "$TERM" == screen* ]] ; then
+    # local CMD=${1[(wr)^(*=*|sudo|ssh|-*)]}       # don't use hostname
+    local CMD="${1[(wr)^(*=*|sudo|ssh|-*)]}$NAME" # use hostname
+    __ESC_print ${CMD}
+  fi
+  # adjust title of xterm
+  case $TERM in
+    (xterm*|rxvt*)
+      __set_title "${(%):-"%n@%m:"}" "$1"
+      ;;
+  esac
+}
+preexec_functions+=_set_cmd_xterm_title
+
+# vim:ft=zsh

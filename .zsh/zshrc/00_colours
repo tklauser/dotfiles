@@ -25,4 +25,9 @@ else
   NO_COLOUR=$'%{\e[0m%}'
 fi
 
+# colour setup for ls
+eval $(dircolors -b)
+# colour setup for ls on OS X:
+is_darwin && export CLICOLOR=1
+
 # vim:ft=zsh

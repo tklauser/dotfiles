@@ -50,10 +50,10 @@ zstyle ':completion:*' cache-path $ZVARDIR/compcache
 zstyle ':completion:*' completer _complete _ignored _match _correct _approximate
 
 # allow cursor-key navigation through completion set
-zstyle ':completion:*:*:*:*' menu select
+zstyle ':completion:*:*:*:*'    menu select
 
 # use colours in completion lists and menus
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:default'  list-colors ${(s.:.)LS_COLORS}
 
 # ignore working and backup copies, and compiled objects
 zstyle ':completion:*:(all-|)files' ignored-patterns \
@@ -97,11 +97,19 @@ compdef _precommand gdb
 compdef _precommand nohup
 compdef _precommand strace
 
-zstyle ':completion:*' verbose yes
-zstyle ':completion:*:descriptions' format '%B%d%b'
-zstyle ':completion:*:messages' format '%d'
-zstyle ':completion:*:warnings' format 'no matches for: %d'
-zstyle ':completion:*' group-name ''
+zstyle ':completion:*'              verbose yes
+zstyle ':completion:*:descriptions' format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
+zstyle ':completion:*:messages'     format '%d'
+zstyle ':completion:*:warnings'     format 'no matches for: %d'
+zstyle ':completion:*'              group-name ''
+
+# complete manual by their section
+zstyle ':completion:*:manuals'      separate-sections true
+zstyle ':completion:*:manuals.*'    insert-sections   true
+zstyle ':completion:*:man:*'        menu yes select
+
+# provide .. as a completion
+zstyle ':completion:*' special-dirs ..
 
 # #527301
 zstyle :completion::complete:xmms2:\*:values list-grouped false

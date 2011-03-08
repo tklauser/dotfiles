@@ -21,6 +21,17 @@ alias grep='grep --color=auto'
 alias m='mount'
 alias u='umount'
 
+# enable color support of ls
+if [ "${TERM}" != "dumb" ]; then
+	eval `dircolors -b`
+	alias ls='ls --color=auto'
+fi
+
+# use colors when browsing man pages, but only if not using LESS_TERMCAP_*
+if [ -z "$LESS_TERMCAP_md" ] ; then
+	[ -d ~/.terminfo/ ] && alias man='TERMINFO=~/.terminfo/ LESS=C TERM=mostlike PAGER=less man'
+fi
+
 # no spelling correction for these
 alias cp='nocorrect cp'
 alias ln='nocorrect ln'

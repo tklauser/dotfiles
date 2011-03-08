@@ -1,0 +1,30 @@
+# utils
+#
+# utility functions
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+# are we root?
+is_root() {
+  test ${EUID:?} -eq 0
+}
+
+# are we on Mac OS X?
+is_darwin() {
+  [[ $OSTYPE == darwin* ]] && return 0
+  return 1
+}
+
+# are we running within an utf environment?
+is_utfenv() {
+  case "$LANG $CHARSET $LANGUAGE" in
+    *utf*) return 0 ;;
+    *UTF*) return 0 ;;
+    *)     return 1 ;;
+    esac
+}
+
+# vim:ft=zsh

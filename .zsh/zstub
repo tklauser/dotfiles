@@ -11,6 +11,7 @@
 
 source $ZDOTDIR/logging
 source $ZDOTDIR/sourcedir
+source $ZDOTDIR/utils
 
 _DIR=$ZDOTDIR/${${(%):-%1N}#.}
 sourcedir $_DIR

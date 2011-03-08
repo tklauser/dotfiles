@@ -14,4 +14,6 @@ setopt auto_cd
 # Silence!
 setopt nobeep
 
+setopt prompt_subst
+
 # vim:ft=zsh

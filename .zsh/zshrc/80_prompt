@@ -13,9 +13,10 @@ if autoload promptinit && promptinit 2>/dev/null ; then
   promptinit
 fi
 
-setopt prompt_subst
-
 EXITCODE="%(?..%?%1v )"
+PS2='\`%_> '
+PS3='?# '
+PS4='+%N:%i:%_> '
 
 # set variable debian_chroot if running in a chroot with /etc/debian_chroot
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then

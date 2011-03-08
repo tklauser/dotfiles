@@ -1,16 +1,24 @@
 # zshrc/00_autoload
 #
-# Autoload functions
+# Autoload available functions
 #
-# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 1994–2008 martin f. krafft <madduck@madduck.net>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
+#
 
-# programmable rename
+# autoload all executable files in $fpath
+autoload -U $^fpath/*(.xN:t)
+
+# smart xargs replacement
+autoload -U zargs
+
+# programmable moving, copying, and linking
 autoload -U zmv
 
-# make color arrays available
-autoload -U colors ; colors 2>/dev/null
+# allow zwc file recompiling
+autoload -U zrecompile
 
 # vim:ft=zsh

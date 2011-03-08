@@ -3,6 +3,7 @@
 # Add local functions directory to $fpath
 #
 # Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 1994–2008 martin f. krafft <madduck@madduck.net>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git

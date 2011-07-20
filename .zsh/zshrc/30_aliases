@@ -44,7 +44,7 @@ alias top10='print -l ? ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 # bofh fortunes
 alias bofh='fortune bofh-excuses'
 
-# Quake 3 (on the left screen)
+# Quake 3 (on the second screen)
 alias q3='SDL_VIDEO_FULLSCREEN_HEAD=1 ioquake3'
 
 # host aliases

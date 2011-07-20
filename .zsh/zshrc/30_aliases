@@ -44,6 +44,9 @@ alias top10='print -l ? ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 # bofh fortunes
 alias bofh='fortune bofh-excuses'
 
+# Quake 3 (on the left screen)
+alias q3='SDL_VIDEO_FULLSCREEN_HEAD=1 ioquake3'
+
 # host aliases
 alias distanz="ssh distanz.ch -t \"screen -dR\""
 alias sym=distanz

@@ -31,5 +31,10 @@
 [merge]
 	tool = vimdiff
 
+[grep]
+	lineNumber = true
+
 [sendemail]
 	smtpserver = smtp.zhaw.ch
+	suppresscc = self
+	bcc = Tobias Klauser <tklauser@distanz.ch>

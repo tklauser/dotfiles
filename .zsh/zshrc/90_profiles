@@ -14,11 +14,12 @@
 
 CHPWD_PROFILE='default'
 
-zstyle ':chpwd:profiles:/home/tklauser/src/nios2-linux(|/|/*)'  profile nios2linux
-zstyle ':chpwd:profiles:/home/tklauser/projects/sinet(|/|/*)'	  profile sinet
-zstyle ':chpwd:profiles:/home/tklauser/src/linux-2.6(|/|/*)'    profile linux26
+zstyle ':chpwd:profiles:/home/tklauser/src/nios2-linux(|/|/*)'  profile zhaw
+zstyle ':chpwd:profiles:/home/tklauser/src/linux-2.6(|/|/*)'    profile distanz
+zstyle ':chpwd:profiles:/home/tklauser/projects/ines(|/|/*)'    profile zhaw
+zstyle ':chpwd:profiles:/home/tklauser/projects/sinet(|/|/*)'	  profile zhaw
 
-chpwd_profile_nios2linux()
+chpwd_profile_zhaw()
 {
 	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
 	print "chpwd(): Switching to profile: $profile"
@@ -27,25 +28,7 @@ chpwd_profile_nios2linux()
 	export GIT_COMMITTER_EMAIL="klto@zhaw.ch"
 }
 
-chpwd_profile_sinet()
-{
-	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-	print "chpwd(): Switching to profile: $profile"
-
-	export GIT_AUTHOR_EMAIL="klto@zhaw.ch"
-	export GIT_COMMITTER_EMAIL="klto@zhaw.ch"
-}
-
-chpwd_profile_hdoip()
-{
-	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-	print "chpwd(): Switching to profile: $profile"
-
-	export GIT_AUTHOR_EMAIL="klto@zhaw.ch"
-	export GIT_COMMITTER_EMAIL="klto@zhaw.ch"
-}
-
-chpwd_profile_linux26()
+chpwd_profile_distanz()
 {
 	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
 	print "chpwd(): Switching to profile: $profile"

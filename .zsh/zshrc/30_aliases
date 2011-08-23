@@ -22,8 +22,8 @@ alias m='mount'
 alias u='umount'
 
 # enable color support of ls
-if [ "${TERM}" != "dumb" ]; then
-	alias ls='ls --color=auto'
+if [ "${TERM}" != "dumb" ] ; then
+	is_darwin || alias ls='ls --color=auto'
 fi
 
 # use colors when browsing man pages, but only if not using LESS_TERMCAP_*

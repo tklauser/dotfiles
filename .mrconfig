@@ -1,5 +1,5 @@
 [DEFAULT]
-include = cat /usr/share/mr/git-fake-bare
+include = cat $HOME/src/mr/lib/*
 
 [src/dotfiles/git.git]
 checkout = git_fake_bare_checkout 'git+ssh://git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'

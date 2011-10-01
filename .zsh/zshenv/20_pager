@@ -11,5 +11,6 @@ export PAGER='less'
 
 # to view some binary files in less
 export LESSOPEN="| /usr/bin/lesspipe %s"
+is_darwin && export LESSOPEN='| /opt/local/bin/lesspipe.sh %s'
 
 # vim:ft=zsh

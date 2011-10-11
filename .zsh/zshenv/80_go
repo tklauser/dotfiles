@@ -25,6 +25,8 @@ if [ -d $_GOROOT ] ; then
     Darwin) export GOOS="darwin";;
     *)      export GOOS="unsupported";;
   esac
+
+  path_append $_GOROOT/bin
 fi
 
 # vim:ft=zsh

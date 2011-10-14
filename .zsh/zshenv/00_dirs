@@ -11,4 +11,6 @@
 export BINDIR=
 export ALTERADIR=/opt/altera9.1
 
+export ZVARDIR=$HOME/.var/zsh
+
 # vim:ft=zsh

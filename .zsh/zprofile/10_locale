@@ -38,7 +38,17 @@ if [ -x =locale ]; then
       _set_locale en_GB.UTF-8
       export LANG=en_GB
       ;;
+    # named differently on Mac OS X
+    *en_GB.UTF-8*)
+      _set_locale en_GB.UTF-8
+      export LANG=en_GB
+      ;;
     *en_US.utf8*)
+      _set_locale en_US.UTF-8
+      export LANG=en_US
+      ;;
+    # named differently on Mac OS X
+    *en_US.UTF-8*)
       _set_locale en_US.UTF-8
       export LANG=en_US
       ;;
@@ -77,6 +87,10 @@ if [ -x =locale ]; then
   # regional stuff should be Swiss over German
   case "$_LOCALE" in
     *de_CH.utf8*)
+      _set_regional_locale de_CH.UTF-8
+      ;;
+    # named differently on Mac OS X
+    *de_CH.UTF-8*)
       _set_regional_locale de_CH.UTF-8
       ;;
     *de_CH.iso885915*)

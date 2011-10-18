@@ -1,7 +1,7 @@
 # .screenrc
 
 startup_message off
-
+defutf8 on
 autodetach on
 
 # set status lines

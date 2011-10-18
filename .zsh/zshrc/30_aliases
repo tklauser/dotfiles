@@ -48,8 +48,8 @@ alias bofh='fortune bofh-excuses'
 alias q3='SDL_VIDEO_FULLSCREEN_HEAD=1 ioquake3'
 
 # host aliases
-alias distanz="ssh distanz.ch -t \"screen -dR\""
+alias distanz="ssh distanz.ch -t \"screen -dRU\""
 alias sym=distanz
-alias lema="ssh lema.distanz.ch -t \"screen -dR\""
+alias lema="ssh lema.distanz.ch -t \"screen -dRU\""
 
 # vim:ft=zsh

@@ -3,7 +3,7 @@
 
 shell /bin/zsh
 startup_message off
-
+defutf8 on
 autodetach on
 screen 0 irssi
 screen 1 mutt

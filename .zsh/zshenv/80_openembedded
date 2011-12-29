@@ -1,0 +1,18 @@
+# zshenv/80_openembedded
+#
+# set up variables specific to OpenEmbedded
+#
+# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+export OEBASE=/home/tklauser/src/oe
+
+if [ -d $OEBASE ] ; then
+  path_append $OEBASE/bitbake/bin
+  export BBPATH=$OEBASE/build:$OEBASE/openembedded
+  export BB_ENV_EXTRAWHITE="OEBASE"
+fi
+
+# vim:ft=zsh

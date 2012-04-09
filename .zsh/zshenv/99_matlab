@@ -1,0 +1,14 @@
+# zshenv/99_matlab
+#
+# Set up MATLAB specific variables
+#
+# Copyright © 2012 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+# make MATLAB run on awesome/dwm
+export MATLAB_JAVA=/usr/lib/jvm/java-6-openjdk-amd64/jre
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# vim:ft=zsh

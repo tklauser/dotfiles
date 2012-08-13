@@ -8,7 +8,7 @@
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
 if [ -d $ALTERADIR ] ; then
-  export LM_LICENSE_FILE=7172@rizzo.zhwin.ch
+  export LM_LICENSE_FILE=7172@rizzo.zhaw.ch
   export QUARTUS_64BIT=0
   export SOPC_KIT_NIOS2=$ALTERADIR/nios2eds
   export SOPC_BUILDER_PATH=$ALTERADIR/nios2eds:$ALTERADIR/ip/ddr_ddr2_sdram/lib/sopc_builder:$ALTERADIR/ip/pci_compiler/lib/sopc_builder

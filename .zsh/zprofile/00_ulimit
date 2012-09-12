@@ -1,0 +1,13 @@
+# zprofile/00_ulimit
+#
+# sets process limits
+#
+# Copyright © 2012 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+# enable core files
+ulimit -c unlimited
+
+# vim:ft=zsh

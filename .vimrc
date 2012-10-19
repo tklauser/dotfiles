@@ -59,6 +59,7 @@ let g:git_diff_spawn_mode=2
 " {{{ Colors and fonts
 
 set background=dark
+let g:solarized_termtrans=1
 colorscheme solarized
 
 " Syntax highlighting

@@ -59,6 +59,7 @@ let g:git_diff_spawn_mode=2
 " {{{ Colors and fonts
 
 set background=dark
+colorscheme solarized
 
 " Syntax highlighting
 if &t_Co > 2 || has("gui_running")

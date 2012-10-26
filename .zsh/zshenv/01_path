@@ -34,6 +34,7 @@ path_append()
 # add the paths here
 
 path_prepend $HOME/bin
+path_append /opt/nios2-new/bin
 path_append /opt/nios2/bin
 path_append /opt/nios2mmu/x86-linux2/bin
 path_prepend /opt/codesourcery/nios2-4.1-211/bin

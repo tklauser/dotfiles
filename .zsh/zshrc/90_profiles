@@ -14,10 +14,11 @@
 
 CHPWD_PROFILE='default'
 
-zstyle ':chpwd:profiles:/home/tklauser/src/nios2-linux(|/|/*)'  profile distanz
-zstyle ':chpwd:profiles:/home/tklauser/src/linux-2.6(|/|/*)'    profile distanz
-zstyle ':chpwd:profiles:/home/tklauser/projects/ines(|/|/*)'    profile zhaw
-zstyle ':chpwd:profiles:/home/tklauser/projects/sinet(|/|/*)'	  profile zhaw
+zstyle ':chpwd:profiles:/home/tklauser/src/nios2-linux(|/|/*)'        profile distanz
+zstyle ':chpwd:profiles:/home/tklauser/src/linux-2.6(|/|/*)'          profile distanz
+zstyle ':chpwd:profiles:/home/tklauser/projects/ines(|/|/*)'          profile zhaw
+zstyle ':chpwd:profiles:/home/tklauser/projects/sinet(|/|/*)'	        profile zhaw
+zstyle ':chpwd:profiles:/home/tklauser/projects/hd_over_ip(|/|/*)'	  profile zhaw
 
 chpwd_profile_zhaw()
 {

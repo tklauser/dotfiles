@@ -44,7 +44,7 @@ set ruler		" Display ruler with cursor positions
 "set statusline=[%n]\ %f\ %m\ %l/%L,%c\ ASCII:\ %3b
 
 set showmode
-
+set modeline
 set backupcopy=auto,breakhardlink
 
 filetype on		" Enable filetype detection

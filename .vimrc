@@ -157,6 +157,7 @@ let g:Imap_UsePlaceHolders = 0
 " }}}
 " {{{ VIM VHDL
 " for taglist
+let loaded_taglist = 'no' " disable for now
 let g:tlist_vhdl_settings = 'vhdl;d:package declarations;b:package bodies;e:entities;a:architecture specifications;t:type declarations;p:processes;f:functions;m:port maps;r:procedures'
 nnoremap <silent> <F8> :TlistToggle<CR>
 " }}}

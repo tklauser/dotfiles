@@ -4,11 +4,17 @@ include = cat $HOME/src/mr/lib/*
 [src/dotfiles/git.git]
 checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
 
+[src/dotfiles/mailfilter.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/mailfilter.git' 'mailfilter.git' '../../../'
+
 [src/dotfiles/minicom.git]
 checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/minicom.git' 'minicom.git' '../../../'
 
 [src/dotfiles/mr.git]
 checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/mr.git' 'mr.git' '../../../'
+
+[src/dotfiles/mutt.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/mutt.git' 'mutt.git' '../../../'
 
 [src/dotfiles/quotes.git]
 checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/quotes.git' 'quotes.git' '../../../'

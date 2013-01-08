@@ -2,10 +2,12 @@
 #
 # set up Altera specific variables
 #
-# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2011-2013 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+ALTERADIR=/opt/altera9.1
 
 if [ -d $ALTERADIR ] ; then
   export LM_LICENSE_FILE=7172@rizzo.zhaw.ch

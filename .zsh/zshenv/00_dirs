@@ -2,15 +2,13 @@
 #
 # Store some often used directory paths in variables
 #
-# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2010-2013 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 #
 
 export BINDIR=
-export ALTERADIR=/opt/altera9.1
-
 export ZVARDIR=$HOME/.var/zsh
 
 # vim:ft=zsh

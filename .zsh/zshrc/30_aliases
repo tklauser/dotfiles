@@ -38,6 +38,10 @@ alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias rm='nocorrect rm'
 
+# python
+alias pylab='ipython --pylab'
+alias qpylab='ipython qtconsole --ConsoleWidget.font_family="Inconsolata" --ConsoleWidget.font_size=11 --colors=Linux --pylab '
+
 # get top 10 shell commands
 alias top10='print -l ? ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 

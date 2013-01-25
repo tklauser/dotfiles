@@ -6,7 +6,7 @@
 #
 # chpwd_profiles taken from grml zshrc
 #
-# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2010-2013 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
@@ -19,15 +19,7 @@ zstyle ':chpwd:profiles:/home/tklauser/src/linux-2.6(|/|/*)'          profile di
 zstyle ':chpwd:profiles:/home/tklauser/projects/ines(|/|/*)'          profile zhaw
 zstyle ':chpwd:profiles:/home/tklauser/projects/sinet(|/|/*)'	        profile zhaw
 zstyle ':chpwd:profiles:/home/tklauser/projects/hd_over_ip(|/|/*)'	  profile zhaw
-
-chpwd_profile_zhaw()
-{
-	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-	print "chpwd(): Switching to profile: $profile"
-
-	export GIT_AUTHOR_EMAIL="klto@zhaw.ch"
-	export GIT_COMMITTER_EMAIL="klto@zhaw.ch"
-}
+zstyle ':chpwd:profiles:*locomotor-primitives*'                       profile uzh
 
 chpwd_profile_distanz()
 {
@@ -35,7 +27,25 @@ chpwd_profile_distanz()
 	print "chpwd(): Switching to profile: $profile"
 
 	export GIT_AUTHOR_EMAIL="tklauser@distanz.ch"
-	export GIT_COMMITTER_EMAIL="tklauser@distanz.ch"
+	export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+}
+
+chpwd_profile_uzh()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: $profile"
+
+	export GIT_AUTHOR_EMAIL="tobias.klauser@uzh.ch"
+	export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+}
+
+chpwd_profile_zhaw()
+{
+	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+	print "chpwd(): Switching to profile: $profile"
+
+	export GIT_AUTHOR_EMAIL="klto@zhaw.ch"
+	export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 }
 
 function chpwd_profiles() {

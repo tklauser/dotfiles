@@ -612,6 +612,9 @@ au BufNewFile,BufRead *.dsl			setf dsl
 " DTD (Document Type Definition for XML)
 au BufNewFile,BufRead *.dtd			setf dtd
 
+" DTS/DTSI (device tree files)
+au BufNewFile,BufRead *.dts,*.dtsi		setf dts
+
 " EDIF (*.edf,*.edif,*.edn,*.edo)
 au BufNewFile,BufRead *.ed\(f\|if\|n\|o\)	setf edif
 

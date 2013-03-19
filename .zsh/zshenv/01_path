@@ -42,6 +42,6 @@ path_append /opt/codesourcery/arm-2010.09/bin
 path_append /opt/android-sdk-linux_86
 path_prepend /opt/local/bin
 path_append /opt/MATLAB/R2012a/bin
-path_append /opt/cov-analysis-linux64-6.5.1
+path_append /opt/cov-analysis-linux64-6.5.1/bin
 
 # vim:ft=zsh

@@ -28,7 +28,7 @@ else
 fi
 
 # colour setup for ls
-is_darwin || eval $(dircolors -b ${HOME}/.zsh/dir_colors)
+is_darwin || eval $(dircolors -b ${HOME}/.zsh/dircolors.256dark)
 # colour setup for ls on OS X:
 is_darwin && export CLICOLOR=1
 

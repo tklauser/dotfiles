@@ -271,6 +271,9 @@ au BufNewFile,BufRead *.bdf			setf bdf
 " BibTeX bibliography database file
 au BufNewFile,BufRead *.bib			setf bib
 
+" Berkley Packet Filter
+au BufRead,BufNewFile *.bpf			setf bpf
+
 " BibTeX Bibliography Style
 au BufNewFile,BufRead *.bst			setf bst
 

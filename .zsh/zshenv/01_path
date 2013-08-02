@@ -2,7 +2,7 @@
 #
 # Functions to add custom directories to the $PATH
 #
-# Copyright © 2011 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2011-2013 Tobias Klauser <tklauser@distanz.ch>
 # Copyright © 1994–2008 martin f. krafft <madduck@madduck.net>
 # Released under the terms of the Artistic Licence 2.0
 #
@@ -35,13 +35,16 @@ path_append()
 
 path_prepend $HOME/bin
 #path_append /opt/nios2-new/bin
+path_prepend /opt/local/bin
+
 path_append /opt/nios2/bin
 path_append /opt/nios2mmu/x86-linux2/bin
 path_prepend /opt/codesourcery/nios2-4.1-211/bin
 path_append /opt/codesourcery/arm-2010.09/bin
 path_append /opt/android-sdk-linux_86
-path_prepend /opt/local/bin
-path_append /opt/MATLAB/R2012a/bin
 path_append /opt/cov-analysis-linux64-6.5.1/bin
+
+path_append /opt/MATLAB/R2012a/bin
+path_append /opt/MATLAB/R2013a/bin
 
 # vim:ft=zsh

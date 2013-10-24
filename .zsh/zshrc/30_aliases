@@ -2,7 +2,7 @@
 #
 # Define command aliases
 #
-# Copyright © 2010 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2010, 2013 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
@@ -57,5 +57,15 @@ alias distanz6="ssh -6 6.distanz.ch -t \"screen -dRU\""
 alias sym=distanz
 alias sym6=distanz6
 alias lema="ssh lema.distanz.ch -t \"screen -dRU\""
+
+#
+# global aliases
+#
+
+alias -g 1N="1>/dev/null"
+alias -g 2N="2>/dev/null"
+alias -g 12N="1>&2>/dev/null"
+
+alias -g L="| less"
 
 # vim:ft=zsh

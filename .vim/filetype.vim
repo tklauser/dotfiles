@@ -271,6 +271,9 @@ au BufNewFile,BufRead *.bdf			setf bdf
 " BibTeX bibliography database file
 au BufNewFile,BufRead *.bib			setf bib
 
+" Berkley Packet Filter
+au BufRead,BufNewFile *.bpf			setf bpf
+
 " BibTeX Bibliography Style
 au BufNewFile,BufRead *.bst			setf bst
 
@@ -611,6 +614,9 @@ au BufNewFile,BufRead *.dsl			setf dsl
 
 " DTD (Document Type Definition for XML)
 au BufNewFile,BufRead *.dtd			setf dtd
+
+" DTS/DTSI (device tree files)
+au BufNewFile,BufRead *.dts,*.dtsi		setf dts
 
 " EDIF (*.edf,*.edif,*.edn,*.edo)
 au BufNewFile,BufRead *.ed\(f\|if\|n\|o\)	setf edif

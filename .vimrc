@@ -88,7 +88,7 @@ let mapleader=","
 
 " Line numbering toggle
 nmap <C-x>n :set invnumber<CR>
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+"highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 map <C-x>s ^iSigned-off-by: <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><ESC>^
 map! <C-x>s Signed-off-by: <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR>

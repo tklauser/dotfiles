@@ -7,7 +7,7 @@
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
-_GOROOT=/opt/local/go
+_GOROOT=$HOME/src/gospace/
 
 if [ -d $_GOROOT ] ; then
   export GOROOT=$_GOROOT

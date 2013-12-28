@@ -7,10 +7,13 @@
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
-_GOROOT=$HOME/src/gospace/
+_GOROOT=/opt/local/go/
 
 if [ -d $_GOROOT ] ; then
+
   export GOROOT=$_GOROOT
+  export GOPATH=$HOME/src/gospace/
+
   arch="$(uname -m)"
   case "$arch" in
     x86_64) export GOARCH="amd64";;
@@ -26,7 +29,7 @@ if [ -d $_GOROOT ] ; then
     *)      export GOOS="unsupported";;
   esac
 
-  path_append $_GOROOT/bin
+  path_append $GOROOT/bin
 fi
 
 # vim:ft=zsh

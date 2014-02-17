@@ -52,11 +52,11 @@ alias bofh='fortune bofh-excuses'
 alias q3='SDL_VIDEO_FULLSCREEN_HEAD=1 ioquake3'
 
 # host aliases
-alias distanz="ssh distanz.ch -t \"screen -dRU\""
-alias distanz6="ssh -6 6.distanz.ch -t \"screen -dRU\""
+alias distanz="ssh tklauser@distanz.ch -t \"screen -dRU\""
+alias distanz6="ssh -6 tklauser@6.distanz.ch -t \"screen -dRU\""
 alias sym=distanz
 alias sym6=distanz6
-alias lema="ssh lema.distanz.ch -t \"screen -dRU\""
+alias lema="ssh tklauser@lema.distanz.ch -t \"screen -dRU\""
 
 #
 # global aliases

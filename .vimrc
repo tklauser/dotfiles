@@ -43,6 +43,9 @@ set ruler		" Display ruler with cursor positions
 " Buffer, filename, line, total lines, column, ASCII value
 "set statusline=[%n]\ %f\ %m\ %l/%L,%c\ ASCII:\ %3b
 
+" maximum number of tabs to open
+set tabpagemax=20
+
 set showmode
 set modeline
 set backupcopy=auto,breakhardlink

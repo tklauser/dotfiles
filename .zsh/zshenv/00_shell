@@ -1,11 +1,13 @@
 # zshenv/00_shell
 #
-# <description>
+# shell specific variables
 #
 # Copyright © 2014 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
+# let the world know we're using zsh (e.g. to use zsh for the shell command in make)
+export SHELL=/bin/zsh
 
 # vim:ft=zsh

@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # use zsh if available and configured
-if [ -f /bin/zsh && -f .zsh/override_bash ] ; then
+if [ -f /bin/zsh ] && [ -f .zsh/override_bash ] ; then
 	exec /bin/zsh
 fi
 

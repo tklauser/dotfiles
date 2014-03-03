@@ -169,3 +169,9 @@ augroup c
 	autocmd BufNewFile *.h :0r! mkheader.py -s <afile>
 augroup END
 " }}}
+" {{{ localvimrc plugin
+" disable sandbox to allow autocmd
+let g:localvimrc_sandbox=0
+" don't ask before loading
+let g:localvimrc_ask=0
+" }}}

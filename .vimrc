@@ -114,12 +114,12 @@ map <F10> <ESC>:! make<CR>
 map! <C-x><SPACE> &nbsp;
 
 " Remove all trailing whitespaces in file
-map <C-x>w :%s/\s\+$//<CR>^
-map! <C-x>w <ESC>:%s/\s\+$//<CR>
+map <leader>w :%s/\s\+$//<CR>^
+map! <leader>w <ESC>:%s/\s\+$//<CR>
 
 " Remove Mac/DOS line-breaks
-map <C-x>l :%s///<CR>^
-map! <C-x>l <ESC>:%s///<CR>
+map <leader>lb :%s///<CR>^
+map! <leader>lb <ESC>:%s///<CR>
 
 " Navigate non-breaking lines more easily
 " from http://zinformatik.de/tipps-tricks/vim-tipps/einige-tipps-und-tricks-fur-vim/
@@ -160,7 +160,7 @@ let g:Imap_UsePlaceHolders = 0
 " }}}
 " {{{ VIM VHDL
 " for taglist
-let loaded_taglist = 'no' " disable for now
+"let loaded_taglist = 'no' " disable for now
 let g:tlist_vhdl_settings = 'vhdl;d:package declarations;b:package bodies;e:entities;a:architecture specifications;t:type declarations;p:processes;f:functions;m:port maps;r:procedures'
 nnoremap <silent> <F8> :TlistToggle<CR>
 " }}}

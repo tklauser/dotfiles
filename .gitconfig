@@ -38,3 +38,4 @@
 	smtpserver = smtp.zhaw.ch
 	suppresscc = self
 	bcc = Tobias Klauser <tklauser@distanz.ch>
+	thread = false

@@ -99,6 +99,9 @@ map! <C-x>s Signed-off-by: <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<C
 map <C-x>a ^iAcked-by: <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><ESC>^
 map! <C-x>a Acked-by: <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR>
 
+map <C-x>r ^iReviewed-by: <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><ESC>^
+map! <C-x>r Reviewed-by: <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR>
+
 map <C-x>y ^iCopyright (C) <C-R>=strftime("%Y")<CR> <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR><ESC>^
 map! <C-x>y Copyright (C) <C-R>=strftime("%Y")<CR> <C-r>=$GIT_AUTHOR_NAME<CR> <<C-r>=$GIT_AUTHOR_EMAIL<CR>><CR>
 

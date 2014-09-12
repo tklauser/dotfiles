@@ -1,0 +1,32 @@
+#!/bin/zsh
+#
+# func/audioconv
+#
+# convert from any audio format to any other (at least the ones that avconv supports)
+#
+# Copyright © 2014 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+#
+
+if [ $# -lt 2 ]; then
+  echo "Usage: ${0##*/} targetfmt file..."
+  return 1
+fi
+
+if [ -z $(which avconv) ]; then
+  echo avconv not found in PATH
+  return 1
+fi
+
+tfmt=$1
+shift
+
+for f in $argv; do
+  if [ -f $f ]; then
+    t="${f[@]:r}.$tfmt"
+    echo "$f > $t"
+    avconv -i "$f" -qscale:a 0 "$t"
+  fi
+done

@@ -1,7 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
+parent=$(ps -o comm= -p $PPID)
+
 # use zsh if available and configured
-if [ -f /bin/zsh ] && [ -f .zsh/override_bash ] ; then
+if [ -f /bin/zsh ] && [ -f .zsh/override_bash ] && [ "x$parent" != "xzsh" ] && [ "x$parent" != "bash" ] ; then
 	exec /bin/zsh
 fi
 
@@ -77,5 +79,6 @@ alias l='ls -hl'
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+
 export NACL_INC_DIR=/home/tobiask/nacl/nacl-20110221/build/ziws06/include/amd64
 export NACL_LIB_DIR=/home/tobiask/nacl/nacl-20110221/build/ziws06/lib/amd64

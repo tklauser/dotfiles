@@ -4,6 +4,7 @@
 set nocompatible	" Forget about (N)VI
 set noerrorbells	" No annoying bells
 set vb t_vb=
+set hidden		" allow buffer switching without saving
 
 " Don't highlight search results
 " set nohlsearch
@@ -171,6 +172,30 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 augroup c
 	autocmd BufNewFile *.h :0r! mkheader.py -s <afile>
 augroup END
+" }}}
+" {{{ Always use tabs in Makefiles
+autocmd BufEnter ?akefile* set noet ts=8 sw=8 nocindent
+" }}}
+" {{{ pathogen plugin
+execute pathogen#infect()
+" }}}
+" {{{ settings for bundles installed by pathogen
+
+" syntastic
+let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_enable_balloons = 0
+let g:syntastic_c_checkers = [ ]
+let g:syntastic_cpp_checkers = [ 'cpplint' ]
+let g:syntastic_cpp_cpplint_args = '--verbose=0'
+let g:syntastic_mode_map = { "mode": "passive", "active_filetypes": [], "passive_filetypes": [] }
+map <Leader>li :SyntasticCheck<CR>
+
+" NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <Leader>nt :NERDTreeToggle<CR>
+
 " }}}
 " {{{ localvimrc plugin
 " disable sandbox to allow autocmd

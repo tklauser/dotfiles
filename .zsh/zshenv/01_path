@@ -44,6 +44,7 @@ path_prepend /opt/codesourcery/nios2-4.1-211/bin
 #path_append /opt/android-sdk-linux_86
 path_append /opt/cov-analysis-linux64-6.5.1/bin
 path_append /opt/linaro/gcc-linaro-arm-linux-gnueabihf/bin
+path_append /opt/sourceryg++-2014.05/bin
 
 path_append /opt/MATLAB/R2012a/bin
 path_append /opt/MATLAB/R2013a/bin

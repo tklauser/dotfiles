@@ -2,7 +2,7 @@
 #
 # Define command aliases
 #
-# Copyright © 2010, 2013 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2010, 2013, 2014 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
@@ -20,6 +20,9 @@ alias egrep='egrep --color=auto'
 alias grep='grep --color=auto'
 alias m='mount'
 alias u='umount'
+
+# show history with timestamps (taken from oh-my-zsh)
+alias history='fc -El 1'
 
 # enable color support of ls
 if [ "${TERM}" != "dumb" ] ; then

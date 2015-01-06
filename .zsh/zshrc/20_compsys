@@ -68,8 +68,8 @@ zstyle ':completion:*:history-words'    stop yes
 zstyle ':completion:*'                  matcher-list 'm:{a-z}={A-Z}'
 
 # ignore working and backup copies, and compiled objects
-zstyle ':completion:*:(all-|)files' ignored-patterns \
-  '*.bk' '*.bak' '*.old' '*~' '.*.sw?' '*.o' '*.pyc'
+#zstyle ':completion:*:(all-|)files' ignored-patterns \
+#  '*.bk' '*.bak' '*.old' '*~' '.*.sw?' '*.o' '*.pyc'
 
 # allow one error for every three characters typed in approximate completer
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3)) not-numeric )'

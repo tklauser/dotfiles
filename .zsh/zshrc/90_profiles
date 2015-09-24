@@ -14,10 +14,9 @@
 
 CHPWD_PROFILE='default'
 
-zstyle ':chpwd:profiles:/home/tklauser/src/nios2-linux(|/|/*)'        profile distanz
-zstyle ':chpwd:profiles:/home/tklauser/src/linux-2.6(|/|/*)'          profile distanz
-zstyle ':chpwd:profiles:*locomotor-primitives*'                       profile uzh
-zstyle ':chpwd:profiles:/home/tobiask/zi/etzel(|/|/*)'	              profile zhinst
+zstyle ':chpwd:profiles:/home/tklauser/src(|/|/*)'  profile distanz
+zstyle ':chpwd:profiles:*locomotor-primitives*'     profile uzh
+zstyle ':chpwd:profiles:/home/tobiask/zi/(|/|/*)'   profile zhinst
 
 chpwd_profile_distanz()
 {

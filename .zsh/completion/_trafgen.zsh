@@ -42,15 +42,17 @@ _arguments -s -S \
     "(-n --num)"{-n,--num}"[Number of packets until exit (def: 0)]" \
     "(-r --rand)"{-r,--rand}"[Randomize packet selection (def: round robin)]" \
     "(-P --cpus)"{-P,--cpus}"[Specify number of forks(<= CPUs) (def: #CPUs)]:cpunum:_cpu" \
-    "(-t --gap)"{-t,--gap}"[Interpacket gap in us (approx)]" \
+    "(-t --gap)"{-t,--gap}"[Set approx. interpacket gap (s/ms/us/ns, def: us)]:gap:"
     "(-S --ring-size)"{-S,--ring-size}"[Manually set mmap size (KiB/MiB/GiB)]:ringsize:" \
-    "(-k --kernel-pull)"{-k,--kernel-pull}"[Kernel pull from user interval in us (def: 10us)]:kernelpull:_gnu_generic" \
     "(-E --seed)"{-E,--seed}"[Manually set srand(3) seed]" \
     "(-u --user)"{-u,--user}"[Drop privileges and change to userid]:user:_user_info" \
     "(-g --group)"{-g,--group}"[Drop privileges and change to groupid]:group:_group_info" \
+    "(-H --prio-high)"{-H,--prio-high}"[Make this high priority process]" \
+    "(-A --no-sock-mem)"{-A,--no-sock-mem}"[Do not change default socket memory setting]" \
+    "(-Q --notouch-irq)"{-Q,--notouch-irq}"[Do not touch IRQ CPU affinity of NIC]" \
     "(-e --example)"{-e,--example}"[Show built-in packet config example]:" \
     "(-V --verbose)"{-V,--verbose}"[Be more verbose]" \
     "(-C --no-cpu-stats)"{-C,--no-cpu-stats}"[Do not print CPU time statistics on exit]" \
-    {-v,--version}"[Show version]:" \
+    {-v,--version}"[Show version and exit]:" \
     {-h,--help}"[Guess what?!]:" \
     "*::args:_gnu_generic"

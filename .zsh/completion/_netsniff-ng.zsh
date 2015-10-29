@@ -35,6 +35,9 @@ _interfaces () {
 _arguments -s -S \
     "(-i -d --dev --in)"{-i,-d,--dev,--in}"[Input source as netdev, pcap or pcap stdin]:input:_interfaces" \
     "(-o --out)"{-o,--out}"[Output sink as netdev, pcap, directory, trafgen, or stdout]::_gnu_generic" \
+    "(-C --fanout-group)"{-C,--fanout-group}"[Join packet fanout group]" \
+    "(-K --fanout-type)"{-K,--fanout-type}"[Apply fanout discipline: hash|lb|cpu|rnd|roll|qm]" \
+    "(-L --fanout-opts)"{-L,--fanout-opts}"[Additional fanout options: defrag|roll]" \
     "(-f --filter)"{-f,--filter}"[Use BPF filter file from bpfc or tcpdump-like expression]" \
     "(-t --type)"{-t,--type}"[Filter type]:filter:(host broadcast multicast others outgoing)" \
     "(-F --interval)"{-F,--interval}"[Dump interval if -o is a dir: <num>KiB/MiB/GiB/s/sec/min/hrs]:interval:_gnu_generic" \
@@ -43,10 +46,12 @@ _arguments -s -S \
     "(-n --num)"{-n,--num}"[Number of packets until exit (def: 0)]" \
     "(-P --prefix)"{-P,--prefix}"[Prefix for pcaps stored in directory]" \
     "(-T --magic)"{-T,--magic}"[Pcap magic number/pcap format to store, see -D]" \
+    "(-w --cooked)"{-w,--cooked}"[Use Linux \"cooked\" header instead of link header]" \
     "(-D --dump-pcap-types)"{-D,--dump-pcap-types}"[Dump pcap types and magic numbers and quit]" \
     "(-B --dump-bpf)"{-B,--dump-bpf}"[Dump generated BPF assembly]" \
     "(-r --rand)"{-r,--rand}"[Randomize packet forwarding order (dev->dev)]" \
     "(-M --no-promisc)"{-M,--no-promisc}"[No promiscuous mode for netdev]" \
+    "(-N --no-hwtimestamp)"{-N,--no-hwtimestamp}"[Disable hardware timestamping]" \
     "(-A --no-sock-mem)"{-A,--no-sock-mem}"[Don\'t tune core socket memory]" \
     "(-m --mmap)"{-m,--mmap}"[Mmap(2) pcap file i.e., for replaying pcaps]" \
     "(-G --sg)"{-G,--sg}"[Scatter/gather pcap file I/O]" \
@@ -64,6 +69,6 @@ _arguments -s -S \
     "(-l --ascii)"{-l,--ascii}"[Print human-readable packet data]" \
     "(-U --update)"{-U,--update}"[Update GeoIP databases]" \
     "(-V --verbose)"{-V,--verbose}"[Be more verbose]" \
-    {-v,--version}"[Show version]:" \
+    {-v,--version}"[Show version and exit]:" \
     {-h,--help}"[Guess what?!]:" \
     "*::args:_gnu_generic"

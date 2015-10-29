@@ -20,15 +20,15 @@ _arguments -s -S \
     "(-H --host)"{-H,--host}"[Host/IPv4/IPv6 to lookup AS route to]:host:_hosts" \
     "(-p --port)"{-p,--port}"[Hosts port to lookup AS route to]:port:_gnu_generic" \
     "(-i -d --dev)"{-i,-d,--dev}"[Networking device i.e., eth0]:device:_interfaces" \
+    "(-b --bind)"{-b,--bind}"[IP address to bind to, Must specify -6 for an IPv6 address]" \
     "(-4 --ipv4)"{-4,--ipv4}"[Use IPv4 requests (default)]" \
     "(-6 --ipv6)"{-6,--ipv6}"[Use IPv6 requests]" \
     "(-n --numeric)"{-n,--numeric}"[Do not do reverse DNS lookup for hops]" \
     "(-u --update)"{-u,--update}"[Update GeoIP databases]" \
-    "(-L --latitude)"{-L,--latitude}"[Show latitude and longtitude]" \
+    "(-L --latitude)"{-L,--latitude}"[Show latitude and longitude]" \
     "(-N --dns)"{-N,--dns}"[Do a reverse DNS lookup for hops]" \
     "(-f --init-ttl)"{-f,--init-ttl}"[Set initial TTL]:ttl:_gnu_generic" \
     "(-m --max-ttl)"{-m,--max--ttl}"[Set maximum TTL]:ttl:_gnu_generic" \
-    "(-q --num-probes)"{-q,--num-probes}"[Set maximum TTL (default: 30)]:ttl:_gnu_generic" \
     "(-q --num-probes)"{-q,--num-probes}"[Number of max probes for each hop (default: 3)]:num:_gnu_generic" \
     "(-x --timeout)"{-x,--timeout}"[Probe response timeout in sec (default: 3)]:timeout:_gnu_generic" \
     "(-S --syn)"{-S,--syn}"[Set TCP SYN flag in packets]" \
@@ -43,6 +43,6 @@ _arguments -s -S \
     "(-X --payload)"{-X,--payload}"[Specify a payload string to test DPIs]:string:_gnu_generic" \
     "(-Z --show-packet)"{-Z,--show-packet}"[Show returned packet on each hop]" \
     "(-l --totlen)"{-l,--totlen}"[Specify total packet len]:lengths:_gnu_generic" \
-    {-v,--version}"[Print version]:" \
-    {-h,--help}"[Print this help]:" \
+    {-v,--version}"[Print version and exit]:" \
+    {-h,--help}"[Print help and exit]:" \
     "*::args:_gnu_generic"

@@ -42,6 +42,7 @@ _interfaces () {
 
 _arguments -s -S \
     "-x[Interactive mode with telnet CLI, default port: 25542]" \
+    "-l[Listen address in interactive mode, default: 0.0.0.0]" \
     "(-6)-4[IPv4 mode (default)]" \
     "(-4)-6[IPv6 mode]" \
     "-c[Send packet count times, default:1, infinite:0]" \
@@ -62,6 +63,6 @@ _arguments -s -S \
     "(-V -VV -VVV)"{-V,-VV,-VVV}"[Verbose and more verbose mode]" \
     "-q[Quiet mode, even omit 'important' standard short messages]" \
     "-S[Simulation mode: DOES NOT put anything on the wire, this is typically combined with one of the verbose modes (v or V)]" \
-    "-v[Show version]:" \
-    "-h[Print this help]:" \
+    "-v[Show version and exit]:" \
+    "-h[Print help and exit]:" \
     "*::args:_gnu_generic"

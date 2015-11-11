@@ -35,7 +35,12 @@
 	lineNumber = true
 
 [sendemail]
-	smtpserver = smtp.zhaw.ch
+	smtpserver = mail.zhinst.com
 	suppresscc = self
 	bcc = Tobias Klauser <tklauser@distanz.ch>
-	thread = false
+
+[tag]
+	sort = version:refname
+
+[versionsort]
+	prereleaseSuffix = -rc

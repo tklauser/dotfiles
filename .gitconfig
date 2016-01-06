@@ -43,10 +43,11 @@
 	suppresscc = self
 	bcc = Tobias Klauser <tklauser@distanz.ch>
 
+[stash]
+	showPatch = true
+
 [tag]
 	sort = version:refname
 
 [versionsort]
 	prereleaseSuffix = -rc
-
-

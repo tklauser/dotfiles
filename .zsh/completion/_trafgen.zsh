@@ -36,13 +36,15 @@ _arguments -s -S \
     "(-i -c --in --conf)"{-i,-c,--in,--conf}"[Packet configuration file/stdin]:input:_files" \
     "(-o -d --out --dev)"{-o,-d,--out,--dev}"[Networking device i.e., eth0]:device:_interfaces" \
     "(-p --cpp)"{-p,--cpp}"[Run packet config through C preprocessor]" \
+    "(-D --define)"{-D,--define}"[Add macro definition for the C preprocessor]::" \
     "(-J --jumbo-support)"{-J,--jumbo-support}"[Support 64KB super jumbo frames (def: 2048B)]" \
     "(-R --rfraw)"{-R,--rfraw}"[Inject raw 802.11 frames]" \
     "(-s --smoke-test)"{-s,--smoke-test}"[Probe if machine survived fuzz-tested packet]" \
     "(-n --num)"{-n,--num}"[Number of packets until exit (def: 0)]" \
     "(-r --rand)"{-r,--rand}"[Randomize packet selection (def: round robin)]" \
     "(-P --cpus)"{-P,--cpus}"[Specify number of forks(<= CPUs) (def: #CPUs)]:cpunum:_cpu" \
-    "(-t --gap)"{-t,--gap}"[Set approx. interpacket gap (s/ms/us/ns, def: us)]:gap:"
+    "(-t --gap)"{-t,--gap}"[Set approx. interpacket gap (s/ms/us/ns, def: us)]:gap:" \
+    "(-b --rate)"(-b,--rate)"[Send traffic at specified rate (pps/B/kB/MB/GB/kbit/Mbit/Gbit/KiB/MiB/GiB):rate:" \
     "(-S --ring-size)"{-S,--ring-size}"[Manually set mmap size (KiB/MiB/GiB)]:ringsize:" \
     "(-E --seed)"{-E,--seed}"[Manually set srand(3) seed]" \
     "(-u --user)"{-u,--user}"[Drop privileges and change to userid]:user:_user_info" \

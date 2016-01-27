@@ -35,7 +35,7 @@ path_append()
 
 path_prepend $HOME/bin
 path_prepend /opt/local/bin
-path_prepend /scratch/local/bin
+path_prepend /scratch/usr/local/bin
 
 path_append /opt/nios2/bin
 path_append /opt/nios2mmu/x86-linux2/bin

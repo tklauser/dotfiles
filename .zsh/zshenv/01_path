@@ -33,9 +33,9 @@ path_append()
 
 # add the paths here
 
-path_prepend $HOME/bin
-path_prepend /opt/local/bin
 path_prepend /scratch/usr/local/bin
+path_prepend /opt/local/bin
+path_prepend $HOME/bin
 
 path_append /opt/nios2/bin
 path_append /opt/nios2mmu/x86-linux2/bin

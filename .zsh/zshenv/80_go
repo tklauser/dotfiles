@@ -7,7 +7,7 @@
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
-_GOROOT=$HOME/go/
+_GOROOT=$HOME/go
 
 if [ -d $_GOROOT ] ; then
 

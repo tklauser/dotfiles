@@ -3,8 +3,8 @@
 parent=$(ps -o comm= -p $PPID)
 
 # use zsh if available and configured
-if [ -f /bin/zsh ] && [ -f .zsh/override_bash ] && [ "x$parent" != "xzsh" ] && [ "x$parent" != "bash" ] ; then
-	exec /bin/zsh
+if [ -x /bin/zsh ] && [ -f .zsh/override_bash ] && [ "x$parent" != "xzsh" ] && [ "x$parent" != "bash" ] ; then
+    exec /bin/zsh
 fi
 
 # If not running interactively, don't do anything

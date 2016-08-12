@@ -69,6 +69,6 @@ alias -g 1N="1>/dev/null"
 alias -g 2N="2>/dev/null"
 alias -g 12N="1>&2>/dev/null"
 
-alias -g L="| less"
+alias -g L="| less -r"
 
 # vim:ft=zsh

@@ -2,7 +2,7 @@
 #
 # Set variables related to the Go programming language
 #
-# Copyright © 2010-2015 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2010-2016 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
@@ -30,6 +30,9 @@ if [ -d $_GOROOT ] ; then
   esac
 
   path_append $GOROOT/bin
+  if [ -d $GOPATH/bin ] ; then
+    path_append $GOPATH/bin
+  fi
 fi
 
 # vim:ft=zsh

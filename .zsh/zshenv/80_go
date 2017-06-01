@@ -2,17 +2,16 @@
 #
 # Set variables related to the Go programming language
 #
-# Copyright © 2010-2016 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2010-2017 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
-_GOROOT=$HOME/go
+_GOROOT="/usr/local/go"
 
 if [ -d $_GOROOT ] ; then
-
-  export GOROOT=$_GOROOT
-  export GOPATH=$HOME/src/gospace
+  export GOROOT="$_GOROOT"
+  export GOPATH="$HOME/go"
 
   arch="$(uname -m)"
   case "$arch" in
@@ -22,7 +21,6 @@ if [ -d $_GOROOT ] ; then
   esac
 
   os="$(uname)"
-
   case "$os" in
     Linux)  export GOOS="linux";;
     Darwin) export GOOS="darwin";;

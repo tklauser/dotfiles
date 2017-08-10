@@ -17,9 +17,17 @@
 	lp = log -p
 	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"
 	up = pull --rebase --autostash
+	cr = codereview
+	change = codereview change
+	gofmt = codereview gofmt
+	mail = codereview mail
+	pending = codereview pending
+	submit = codereview submit
+	sync = codereview sync
 
 [pretty]
 	fixes = Fixes: %h (\"%s\")
+	commit = %h (\"%s\")
 
 [color]
 	ui = true
@@ -52,3 +60,5 @@
 
 [versionsort]
 	prereleaseSuffix = -rc
+[http]
+	cookiefile = /home/tobiask/.gitcookies

@@ -59,7 +59,7 @@ esac
 #fi
 if [ `uname` != "Darwin" ] && [ `uname` != "SunOS" ]; then #dont if darwin
 # enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ]; then 
+if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b`"
     alias ls='ls --color=auto'
 fi
@@ -68,10 +68,36 @@ else
 [ ];
 fi
 
+SSH_ENV="$HOME/.ssh/env.`hostname`"
+
+function start_ssh_agent {
+     echo "Starting SSH agent..."
+     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+     chmod 600 "${SSH_ENV}"
+     . "${SSH_ENV}" > /dev/null
+     /usr/bin/ssh-add;
+}
+
+if [ -f "${SSH_ENV}" ]; then
+     . "${SSH_ENV}" > /dev/null
+     #ps ${SSH_AGENT_PID} doesn't work under cywgin
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+         start_ssh_agent;
+     }
+else
+     start_ssh_agent;
+fi
+
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -hl'
+
+# other useful aliases
+alias ..='cd ..'
+
+export EDITOR=vim
+export PATH=$HOME/bin:$PATH
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

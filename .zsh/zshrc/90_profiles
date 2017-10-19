@@ -10,16 +10,15 @@
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
-#
 
 CHPWD_PROFILE='default'
 
-zstyle ':chpwd:profiles:/home/tklauser/go(|/|/*)'  profile distanz
-zstyle ':chpwd:profiles:/home/tobiask/go(|/|/*)'   profile distanz
+zstyle ':chpwd:profiles:/home/tklauser/go(|/|/*)'   profile distanz
+zstyle ':chpwd:profiles:/home/tobiask/go(|/|/*)'    profile distanz
 zstyle ':chpwd:profiles:/home/tklauser/src(|/|/*)'  profile distanz
 zstyle ':chpwd:profiles:/home/tobiask/src(|/|/*)'   profile distanz
-zstyle ':chpwd:profiles:*locomotor-primitives*'     profile uzh
 zstyle ':chpwd:profiles:/home/tobiask/zi(|/|/*)'    profile zhinst
+zstyle ':chpwd:profiles:/scratch/tobiask/zi(|/|/*)' profile zhinst
 
 chpwd_profile_distanz()
 {
@@ -27,15 +26,6 @@ chpwd_profile_distanz()
 	print "chpwd(): Switching to profile: $profile"
 
 	export GIT_AUTHOR_EMAIL="tklauser@distanz.ch"
-	export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-}
-
-chpwd_profile_uzh()
-{
-	[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-	print "chpwd(): Switching to profile: $profile"
-
-	export GIT_AUTHOR_EMAIL="tobias.klauser@uzh.ch"
 	export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 }
 

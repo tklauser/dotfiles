@@ -7,7 +7,6 @@
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
-#
 
 path_prepend()
 {
@@ -44,8 +43,5 @@ path_prepend /opt/codesourcery/nios2-4.1-211/bin
 path_append /opt/coverity/bin
 path_append /opt/linaro/gcc-linaro-arm-linux-gnueabihf/bin
 path_append /opt/sourceryg++-2014.05/bin
-
-path_append /opt/MATLAB/R2012a/bin
-path_append /opt/MATLAB/R2013a/bin
 
 # vim:ft=zsh

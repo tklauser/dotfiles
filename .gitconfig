@@ -14,6 +14,7 @@
 	br = branch
 	d = diff
 	ds = diff --stat
+	fixes = show --pretty=fixes -s
 	lp = log -p
 	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"
 	up = pull --rebase --autostash

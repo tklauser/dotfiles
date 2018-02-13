@@ -6,6 +6,7 @@
 [core]
 	abbrev = 12
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = /home/tobiask/.gitignore
 
 [alias]
 	co = checkout

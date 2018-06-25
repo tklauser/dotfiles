@@ -17,8 +17,10 @@ zstyle ':chpwd:profiles:/home/tklauser/go(|/|/*)'   profile distanz
 zstyle ':chpwd:profiles:/home/tobiask/go(|/|/*)'    profile distanz
 zstyle ':chpwd:profiles:/home/tklauser/src(|/|/*)'  profile distanz
 zstyle ':chpwd:profiles:/home/tobiask/src(|/|/*)'   profile distanz
+zstyle ':chpwd:profiles:/scratch/tobiask/go(|/|/*)' profile distanz
 zstyle ':chpwd:profiles:/home/tobiask/zi(|/|/*)'    profile zhinst
 zstyle ':chpwd:profiles:/scratch/tobiask/zi(|/|/*)' profile zhinst
+zstyle ':chpwd:profiles:/scratch/yoctozi(|/|/*)'    profile zhinst
 
 chpwd_profile_distanz()
 {

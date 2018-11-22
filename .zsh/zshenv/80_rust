@@ -1,0 +1,12 @@
+# zshenv/80_rust
+#
+# Set variables related to the Rust programming language
+#
+# Copyright © 2018 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+path_append $HOME/.cargo/bin
+
+# vim:ft=zsh

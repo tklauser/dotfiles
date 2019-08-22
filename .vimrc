@@ -1,5 +1,3 @@
-" $Id: vimrc,v 1.32 2007/02/10 18:58:51 tklauser Exp $
-
 " {{{ General settings
 set nocompatible	" Forget about (N)VI
 set noerrorbells	" No annoying bells

@@ -41,6 +41,8 @@ set ruler		" Display ruler with cursor positions
 
 " Buffer, filename, line, total lines, column, ASCII value
 "set statusline=[%n]\ %f\ %m\ %l/%L,%c\ ASCII:\ %3b
+"set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
+"set statusline+=%{&ff}] 			" file format
 
 " maximum number of tabs to open
 set tabpagemax=20

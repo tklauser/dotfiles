@@ -14,11 +14,11 @@ _ZIPYTHON_LATEST=$HOME/tmp/ziPythonLatest/
 [ -d $_ZIPYTHON_LATEST ] && export PYTHONPATH=$PYTHONPATH:$_ZIPYTHON_LATEST
 
 _PYENV_ROOT="$HOME/.pyenv"
-[ -d $_PYENV_ROOT ] && export PYENV_ROOT=$_PYENV_ROOT
-
-path_prepend $PYENV_ROOT/bin
-
-eval "$(pyenv init -)"
+if [ -d $_PYENV_ROOT ] ; then
+  export PYENV_ROOT=$_PYENV_ROOT
+  path_prepend $PYENV_ROOT/bin
+  eval "$(pyenv init -)"
+fi
 
 export PYTHONSTARTUP=$HOME/.pythonrc
 

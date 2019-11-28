@@ -18,7 +18,7 @@
 	fixes = show --pretty=fixes -s
 	lp = log -p
 	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"
-	up = pull --rebase --autostash
+	up = pull --rebase --autostash origin master
 	cr = codereview
 	change = codereview change
 	gofmt = codereview gofmt

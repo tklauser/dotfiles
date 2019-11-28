@@ -26,6 +26,7 @@
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync
+	today = commit --amend --date=now --no-edit
 
 [pretty]
 	fixes = Fixes: %h (\"%s\")

@@ -64,4 +64,4 @@
 [versionsort]
 	prereleaseSuffix = -rc
 [http]
-	cookiefile = /home/tobiask/.gitcookies
+	cookiefile = /home/tklauser/.gitcookies

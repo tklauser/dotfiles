@@ -32,7 +32,6 @@ path_append()
 
 # add the paths here
 
-path_prepend /snap/bin
 path_prepend $HOME/bin
 
 #path_append /opt/nios2/bin

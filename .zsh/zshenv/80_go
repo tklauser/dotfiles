@@ -10,7 +10,6 @@
 _GOROOT="/usr/local/go"
 
 if [ -d $_GOROOT ] ; then
-  export GOROOT="$_GOROOT"
   export GOPATH="$HOME/go"
 
   arch="$(uname -m)"
@@ -27,10 +26,12 @@ if [ -d $_GOROOT ] ; then
     *)      export GOOS="unsupported";;
   esac
 
-  path_append $GOROOT/bin
+  path_append $_GOROOT/bin
   if [ -d $GOPATH/bin ] ; then
     path_append $GOPATH/bin
   fi
 fi
+
+alias gotip=$HOME/src/go/bin/go
 
 # vim:ft=zsh

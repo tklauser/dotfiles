@@ -32,6 +32,7 @@ path_append()
 
 # add the paths here
 
+path_prepend $HOME/.local/bin
 path_prepend $HOME/bin
 
 #path_append /opt/nios2/bin

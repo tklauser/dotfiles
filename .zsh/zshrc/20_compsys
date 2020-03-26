@@ -9,9 +9,21 @@
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
-#
 
 zstyle :compinstall filename '$ZDOTDIR/zshrc/20_compsys'
+
+### INIT
+
+autoload -Uz compinit
+compinit -d $ZVARDIR/comp-$HOST
+
+# load fancy completion list and menu handler
+zmodload zsh/complist
+
+# avoid old-style completion (compctl)
+zstyle ':completion:*' use-compctl false
+
+### OPTIONS
 
 # do not complete just at the end
 setopt completeinword
@@ -37,13 +49,6 @@ setopt correct
 # be magic about adding/removing final characters on tab completion
 setopt auto_param_keys auto_param_slash auto_remove_slash
 
-# load fancy completion list and menu handler
-zmodload zsh/complist
-
-# initialise the completion system
-autoload -U compinit
-compinit -d $ZVARDIR/comp-$HOST
-
 # cache results
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path $ZVARDIR/compcache
@@ -65,7 +70,7 @@ zstyle ':completion:*:history-words'    remove-all-dups yes
 zstyle ':completion:*:history-words'    stop yes
 
 # match uppercase from lowercase
-zstyle ':completion:*'                  matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*'                  matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 # ignore working and backup copies, and compiled objects
 #zstyle ':completion:*:(all-|)files' ignored-patterns \
@@ -134,6 +139,9 @@ zstyle ':completion:*:manuals.*'    insert-sections   true
 zstyle ':completion:*:man:*'        menu yes select
 
 # provide .. as a completion
-zstyle ':completion:*' special-dirs ..
+zstyle ':completion:*' special-dirs true
+
+# automatically load bash completion functions
+autoload -Uz bashcompinit && bashcompinit
 
 # vim:ft=zsh

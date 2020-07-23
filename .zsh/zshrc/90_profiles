@@ -15,6 +15,7 @@ CHPWD_PROFILE='default'
 
 zstyle ':chpwd:profiles:/home/tklauser/go/src/github.com/isovalent(|/|/*)'   profile isovalent
 zstyle ':chpwd:profiles:/home/tklauser/go/src/github.com/covalentio(|/|/*)'  profile isovalent
+zstyle ':chpwd:profiles:/home/tklauser/src/isovalent(|/|/*)'                 profile isovalent
 zstyle ':chpwd:profiles:/home/tklauser/src/cilium/cilium.io(|/|/*)'          profile cilium
 zstyle ':chpwd:profiles:/home/tklauser/go(|/|/*)'                            profile distanz
 zstyle ':chpwd:profiles:/home/tklauser/src(|/|/*)'                           profile distanz

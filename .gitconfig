@@ -9,15 +9,21 @@
 	excludesfile = /home/tobiask/.gitignore
 
 [alias]
+	amend = commit --amend
 	co = checkout
-	st = status
+	ca = commit --amend
 	ci = commit
 	br = branch
 	d = diff
+	dc = diff --cached
+	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"
 	ds = diff --stat
 	fixes = show --pretty=fixes -s
+	ll = log --decorate --graph --pretty=oneline
 	lp = log -p
-	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"
+	ls = ls-files
+	s = status -s
+	st = status
 	up = pull --rebase --autostash origin master
 	cr = codereview
 	change = codereview change

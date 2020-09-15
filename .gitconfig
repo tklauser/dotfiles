@@ -28,7 +28,7 @@
 	cr = codereview
 	change = codereview change
 	gofmt = codereview gofmt
-	mail = codereview mail
+	mail = codereview mail -trust
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync

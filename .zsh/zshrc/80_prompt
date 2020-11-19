@@ -18,19 +18,14 @@ PS2='\`%_> '
 PS3='?# '
 PS4='+%N:%i:%_> '
 
-# set variable debian_chroot if running in a chroot with /etc/debian_chroot
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-  debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # don't use colors on dumb terminals
 if [[ "$TERM" == dumb ]] ; then
-  PROMPT="${EXITCODE}${debian_chroot:+($debian_chroot)}%n@%m%40<...<%B%~%b%<< %# "
+  PROMPT="${EXITCODE}%n@%m%40<...<%B%~%b%<< %# "
 else
   if (( EUID != 0 )); then
-    PROMPT="${RED}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${RED}%n${WHITE}@%m${NO_COLOUR}:%40<...<%B%~%b%<< "'${vcs_info_msg_0_}'"%# " # primary prompt string
+    PROMPT="${RED}${EXITCODE}${WHITE}${RED}%n${WHITE}@%m${NO_COLOUR}:%40<...<%B%~%b%<< "'${vcs_info_msg_0_}'"%# " # primary prompt string
   else
-    PROMPT="${BLUE}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${RED}%n${NO_COLOUR}@%m%40<...<%B%~%b%<< %# " # primary prompt string
+    PROMPT="${BLUE}${EXITCODE}${WHITE}${RED}%n${NO_COLOUR}@%m%40<...<%B%~%b%<< %# " # primary prompt string
   fi
 fi
 

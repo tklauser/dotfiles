@@ -19,8 +19,10 @@ alias cal='cal -m'
 alias egrep='egrep --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
-alias m='mount'
-alias u='umount'
+# most often used commands from top10
+alias m='make'
+alias g='git'
+alias v='vim'
 
 # show history with timestamps (taken from oh-my-zsh)
 alias history='fc -El 1'

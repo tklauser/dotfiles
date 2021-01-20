@@ -6,7 +6,7 @@
 [core]
 	abbrev = 12
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /home/tobiask/.gitignore
+	excludesfile = ~/.gitignore
 
 [alias]
 	amend = commit --amend
@@ -73,4 +73,4 @@
 [versionsort]
 	prereleaseSuffix = -rc
 [http]
-	cookiefile = /home/tklauser/.gitcookies
+	cookiefile = ~/.gitcookies

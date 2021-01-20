@@ -60,7 +60,6 @@
 	lineNumber = true
 
 [sendemail]
-	smtpserver = mail.zhinst.com
 	suppresscc = self
 	bcc = Tobias Klauser <tklauser@distanz.ch>
 

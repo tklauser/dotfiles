@@ -105,6 +105,3 @@ export PATH=$HOME/bin:$PATH
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
-
-export NACL_INC_DIR=/home/tobiask/nacl/nacl-20110221/build/ziws06/include/amd64
-export NACL_LIB_DIR=/home/tobiask/nacl/nacl-20110221/build/ziws06/lib/amd64

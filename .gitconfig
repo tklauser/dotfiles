@@ -73,3 +73,10 @@
 	prereleaseSuffix = -rc
 [http]
 	cookiefile = ~/.gitcookies
+
+[includeIf "gitdir:**/cilium.io/.git"]
+	path = ~/.config/git/cilium.io
+[includeIf "gitdir:**/ebpf.io/.git"]
+	path = ~/.config/git/cilium.io
+[includeIf "gitdir:**/isovalent/*/"]
+	path = ~/.config/git/isovalent.com

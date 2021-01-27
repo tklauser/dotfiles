@@ -24,7 +24,7 @@
 	ls = ls-files
 	s = status -s
 	st = status
-	up = pull --rebase --autostash origin master
+	up = pull --rebase --autostash --prune origin master
 	cr = codereview
 	change = codereview change
 	gofmt = codereview gofmt

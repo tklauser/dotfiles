@@ -117,6 +117,9 @@ map <F10> <ESC>:! make<CR>
 
 map! <C-x><SPACE> &nbsp;
 
+map <C-p> :Files<CR>
+map <C-f> :NERDTreeFind<CR>
+
 " Remove all trailing whitespaces in file
 map <leader>w :%s/\s\+$//<CR>^
 map! <leader>w <ESC>:%s/\s\+$//<CR>

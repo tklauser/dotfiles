@@ -182,3 +182,12 @@ let g:localvimrc_sandbox=0
 " don't ask before loading
 let g:localvimrc_ask=0
 " }}}
+" {{{ vim-plug (https://github.com/junegunn/vim-plug)
+call plug#begin('~/.vim/plugged')
+
+" fzf (https://github.com/junegunn/fzf.vim)
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+" }}}

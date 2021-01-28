@@ -1,4 +1,4 @@
-[core]
-	hooksPath = ~/.config/git/hooks/with-signoff
 [user]
 	email = tobias@cilium.io
+[include]
+	path = ~/.config/git/with-signoff-hook

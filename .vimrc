@@ -159,22 +159,8 @@ map <Leader>mkc i/*  */<Left><Left><Left>
 map <Leader>a  G/^\* /e+1<CR>ye1G}oHallo <c-r>",<cr><ESC>
 
 " }}}
-" {{{ Abbrevations
-ab mfg Mit freundlichen Grüssen
-" }}}
 " {{{ VIM LaTeX
 let g:Imap_UsePlaceHolders = 0
-" }}}
-" {{{ VIM VHDL
-" for taglist
-"let loaded_taglist = 'no' " disable for now
-let g:tlist_vhdl_settings = 'vhdl;d:package declarations;b:package bodies;e:entities;a:architecture specifications;t:type declarations;p:processes;f:functions;m:port maps;r:procedures'
-nnoremap <silent> <F8> :TlistToggle<CR>
-" }}}
-" {{{ Automatically create C header file skeletons
-augroup c
-	autocmd BufNewFile *.h :0r! mkheader.py -s <afile>
-augroup END
 " }}}
 " {{{ Always use tabs in Makefiles
 autocmd BufEnter ?akefile* set noet ts=8 sw=8 nocindent
@@ -183,16 +169,6 @@ autocmd BufEnter ?akefile* set noet ts=8 sw=8 nocindent
 execute pathogen#infect()
 " }}}
 " {{{ settings for bundles installed by pathogen
-
-" syntastic
-let g:syntastic_check_on_wq = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_enable_balloons = 0
-let g:syntastic_c_checkers = [ ]
-let g:syntastic_cpp_checkers = [ 'cpplint' ]
-let g:syntastic_cpp_cpplint_args = '--verbose=0'
-let g:syntastic_mode_map = { "mode": "passive", "active_filetypes": [], "passive_filetypes": [] }
-map <Leader>li :SyntasticCheck<CR>
 
 " NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif

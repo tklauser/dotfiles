@@ -8,7 +8,6 @@
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 #
 
-export BINDIR=
 export ZVARDIR=$HOME/.var/zsh
 
 # vim:ft=zsh

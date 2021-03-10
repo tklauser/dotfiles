@@ -88,6 +88,6 @@
 [includeIf "gitdir:**/isovalent/*/"]
 	path = ~/.config/git/isovalent.com
 [includeIf "gitdir:**/cilium/*/"]
-	path = ~/.config/git/with-signoff-hook
+	path = ~/.config/git/cilium.io
 [includeIf "gitdir:**/linux/.git"]
 	path = ~/.config/git/with-signoff-hook

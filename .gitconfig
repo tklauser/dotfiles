@@ -22,18 +22,20 @@
 	ll = log --decorate --graph --pretty=oneline
 	lp = log -p
 	ls = ls-files
+	pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pushf = push --force-with-lease
+	ri = rebase --interactive --autosquash
 	s = status -s
 	st = status
+	today = commit --amend --date=now --no-edit
 	up = pull --rebase --autostash --prune origin master
 	cr = codereview
 	change = codereview change
 	gofmt = codereview gofmt
 	mail = codereview mail -trust
 	pending = codereview pending
-	pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 	submit = codereview submit
 	sync = codereview sync
-	today = commit --amend --date=now --no-edit
 
 [pretty]
 	fixes = Fixes: %h (\"%s\")

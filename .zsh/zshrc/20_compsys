@@ -10,7 +10,7 @@
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
-zstyle :compinstall filename '$ZDOTDIR/zshrc/20_compsys'
+zstyle :compinstall filename "$ZDOTDIR/zshrc/20_compsys"
 
 ### INIT
 

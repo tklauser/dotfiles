@@ -105,3 +105,8 @@ export PATH=$HOME/bin:$PATH
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+
+CARGO_ENV="$HOME/.cargo/env"
+if [ -f $CARGO_ENV ]; then
+	. $CARGO_ENV
+fi

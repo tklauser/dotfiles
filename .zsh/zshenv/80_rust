@@ -7,6 +7,6 @@
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
-path_append $HOME/.cargo/bin
+path_prepend $HOME/.cargo/bin
 
 # vim:ft=zsh

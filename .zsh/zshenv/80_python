@@ -10,16 +10,6 @@
 #_PYTHON_USER=$HOME/.local/lib/python2.7/site-packages
 #[ -d $_PYTHON_USER ] && export PYTHONPATH=$_PYTHON_USER:$PYTHONPATH
 
-_ZIPYTHON_LATEST=$HOME/tmp/ziPythonLatest/
-[ -d $_ZIPYTHON_LATEST ] && export PYTHONPATH=$PYTHONPATH:$_ZIPYTHON_LATEST
-
-_PYENV_ROOT="$HOME/.pyenv"
-if [ -d $_PYENV_ROOT ] ; then
-  export PYENV_ROOT=$_PYENV_ROOT
-  path_prepend $PYENV_ROOT/bin
-  eval "$(pyenv init -)"
-fi
-
 export PYTHONSTARTUP=$HOME/.pythonrc
 
 # vim:ft=zsh

@@ -13,6 +13,8 @@ if [ -d $OEBASE ] ; then
   path_append $OEBASE/bitbake/bin
   export BBPATH=$OEBASE/build:$OEBASE/openembedded
   export BB_ENV_EXTRAWHITE="OEBASE"
+else
+  unset OEBASE
 fi
 
 # vim:ft=zsh

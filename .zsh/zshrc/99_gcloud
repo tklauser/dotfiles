@@ -1,0 +1,12 @@
+# zshrc/99_gcloud
+#
+# Copyright © 2021 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+if [ -f /usr/share/google-cloud-sdk/completion.zsh.inc ] ; then
+  source /usr/share/google-cloud-sdk/completion.zsh.inc
+fi
+
+# vim:ft=zsh

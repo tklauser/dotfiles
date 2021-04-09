@@ -35,7 +35,7 @@ fi
 alias gotip=$HOME/src/go/bin/go
 
 export GO111MODULE=on
-export GOPROXY=direct
-export GOSUMDB=off
+# export GOPROXY=direct
+# export GOSUMDB=off
 
 # vim:ft=zsh

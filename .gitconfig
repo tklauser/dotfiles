@@ -89,6 +89,8 @@
 	path = ~/.config/git/cilium.io
 [includeIf "gitdir:**/isovalent/*/"]
 	path = ~/.config/git/isovalent.com
+[includeIf "gitdir:**/covalentio/*/"]
+	path = ~/.config/git/isovalent.com
 [includeIf "gitdir:**/cilium/*/"]
 	path = ~/.config/git/cilium.io
 [includeIf "gitdir:**/linux/.git"]

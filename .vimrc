@@ -193,6 +193,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }	" Go support
 Plug 'rust-lang/rust.vim'				" Rust support
 Plug 'airblade/vim-gitgutter'           		" git status gutter
 Plug 'tpope/vim-fugitive'				" git commands
+Plug 'tpope/vim-rhubarb'				" GitHub integration
 Plug 'tpope/vim-commentary'				" comment out stuff
 Plug 'vim-scripts/taglist.vim'
 Plug 'joestringer/cscope_maps'				" cscope maps

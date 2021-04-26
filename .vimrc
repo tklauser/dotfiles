@@ -165,12 +165,7 @@ let g:Imap_UsePlaceHolders = 0
 " {{{ Always use tabs in Makefiles
 autocmd BufEnter ?akefile* set noet ts=8 sw=8 nocindent
 " }}}
-" {{{ pathogen plugin
-execute pathogen#infect()
-" }}}
-" {{{ settings for bundles installed by pathogen
-
-" NERDTree
+" {{{ NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 

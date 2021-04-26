@@ -28,8 +28,8 @@ set foldmethod=marker
 
 " Wrap line longer than the display
 "set wrap
-" Textwidth of 80 (Standard terminal)
-set tw=80
+" Textwidth of 100
+set textwidth=100
 
 " Number of undo operations to store
 set undolevels=50
@@ -54,8 +54,6 @@ set backupcopy=auto,breakhardlink
 filetype on		" Enable filetype detection
 filetype indent on	" Enable filetype specific indenting
 filetype plugin on	" Enable filetype specific plugins
-
-au FileType c set cindent
 
 let g:git_diff_spawn_mode=2
 

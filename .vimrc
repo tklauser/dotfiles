@@ -174,12 +174,6 @@ let NERDTreeShowHidden=1
 map <Leader>nt :NERDTreeToggle<CR>
 
 " }}}
-" {{{ localvimrc plugin
-" disable sandbox to allow autocmd
-let g:localvimrc_sandbox=0
-" don't ask before loading
-let g:localvimrc_ask=0
-" }}}
 " {{{ vim-plug (https://github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')
 

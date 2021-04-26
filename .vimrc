@@ -4,9 +4,8 @@ set noerrorbells	" No annoying bells
 set vb t_vb=
 set hidden		" allow buffer switching without saving
 
-" Don't highlight search results
-" set nohlsearch
-
+" Highlight search results
+set hlsearch
 " Type-ahead find
 set incsearch
 
@@ -37,7 +36,7 @@ set undolevels=50
 set laststatus=2	" Always show the statusline
 set ruler		" Display ruler with cursor positions
 
-"set cursorline		" Highlight the cursor line and column
+set cursorline		" Highlight the cursor line and column
 
 " Buffer, filename, line, total lines, column, ASCII value
 "set statusline=[%n]\ %f\ %m\ %l/%L,%c\ ASCII:\ %3b
@@ -106,7 +105,6 @@ map! <C-x>y Copyright (C) <C-R>=strftime("%Y")<CR> <C-r>=$GIT_AUTHOR_NAME<CR> <<
 
 map <C-x>c i<C-R>=strftime("%F %R")<CR> Tobias Klauser <tklauser@distanz.ch><CR><TAB>* <ESC>
 map! <C-x>c <C-R>=strftime("%F %R")<CR> Tobias Klauser <tklauser@distanz.ch><CR><TAB>* 
-
 map <C-x>f ^iFrom: Tobias Klauser <tklauser@distanz.ch><CR><ESC>^
 map! <C-x>f From: Tobias Klauser <tklauser@distanz.ch><CR>
 

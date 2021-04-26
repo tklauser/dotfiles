@@ -168,7 +168,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let NERDTreeShowHidden=1
 
 map <Leader>nt :NERDTreeToggle<CR>
-
+" }}}
+" {{{ airline
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 " }}}
 " {{{ vim-plug (https://github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')

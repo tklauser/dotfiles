@@ -126,6 +126,8 @@ map! <C-x><SPACE> &nbsp;
 map <C-p> :Files<CR>
 map <C-f> :NERDTreeFind<CR>
 
+map <Leader>tl :TlistToggle<CR>
+
 " Remove all trailing whitespaces in file
 map <leader>w :%s/\s\+$//<CR>^
 map! <leader>w <ESC>:%s/\s\+$//<CR>
@@ -195,7 +197,7 @@ Plug 'airblade/vim-gitgutter'           		" git status gutter
 Plug 'tpope/vim-fugitive'				" git commands
 Plug 'tpope/vim-rhubarb'				" GitHub integration
 Plug 'tpope/vim-commentary'				" comment out stuff
-Plug 'vim-scripts/taglist.vim'
+Plug 'yegappan/taglist'					" code browser using ctags/cscope
 Plug 'joestringer/cscope_maps'				" cscope maps
 
 " fzf (https://github.com/junegunn/fzf.vim)

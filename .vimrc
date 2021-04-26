@@ -177,6 +177,17 @@ map <Leader>nt :NERDTreeToggle<CR>
 " {{{ vim-plug (https://github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-airline/vim-airline'          		" status line
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'              		" NERDTree file browser
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }	" Go support
+Plug 'rust-lang/rust.vim'				" Rust support
+Plug 'airblade/vim-gitgutter'           		" git status gutter
+Plug 'tpope/vim-fugitive'				" git commands
+Plug 'tpope/vim-commentary'				" comment out stuff
+Plug 'vim-scripts/taglist.vim'
+Plug 'joestringer/cscope_maps'				" cscope maps
+
 " fzf (https://github.com/junegunn/fzf.vim)
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'

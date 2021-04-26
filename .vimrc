@@ -43,6 +43,16 @@ set cursorline		" Highlight the cursor line and column
 "set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
 "set statusline+=%{&ff}] 			" file format
 
+" Always show at least one line above/below the cursor.
+" See https://github.com/tpope/vim-sensible
+if !&scrolloff
+  set scrolloff=1
+endif
+if !&sidescrolloff
+  set sidescrolloff=5
+endif
+set display+=lastline
+
 " maximum number of tabs to open
 set tabpagemax=20
 

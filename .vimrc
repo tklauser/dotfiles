@@ -8,6 +8,11 @@ set hidden		" allow buffer switching without saving
 set hlsearch
 " Type-ahead find
 set incsearch
+" Use <C-L> to clear the highlighting of :set hlsearch.
+" Taken from https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
 
 " Indent of 8, but no spaces
 set shiftwidth=8

@@ -26,9 +26,9 @@ if [ -d $_GOROOT ] ; then
     *)      export GOOS="unsupported";;
   esac
 
-  path_append $_GOROOT/bin
+  path_prepend $_GOROOT/bin
   if [ -d $GOPATH/bin ] ; then
-    path_append $GOPATH/bin
+    path_prepend $GOPATH/bin
   fi
 fi
 

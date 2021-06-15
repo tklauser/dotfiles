@@ -38,4 +38,8 @@ alias gotip=$HOME/src/go/bin/go
 # export GOPROXY=direct
 # export GOSUMDB=off
 
+# Get all goroutine traces on panic, not just the crashing one. See
+# https://github.com/maruel/panicparse#gotraceback
+export GOTRACEBACK=all
+
 # vim:ft=zsh

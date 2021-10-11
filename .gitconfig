@@ -9,7 +9,7 @@
 	excludesfile = ~/.gitignore
 
 [alias]
-	amend = commit --amend
+	amend = commit --amend --date=now
 	co = checkout
 	ca = commit --amend
 	ci = commit

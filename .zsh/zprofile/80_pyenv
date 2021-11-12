@@ -1,0 +1,14 @@
+# zprofile/80_pyenv
+#
+# Set variables related to pyenv
+#
+# Copyright © 2021 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+fi
+
+# vim:ft=zsh

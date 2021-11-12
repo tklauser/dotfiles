@@ -34,14 +34,5 @@ path_append()
 
 path_prepend $HOME/.local/bin
 path_prepend $HOME/bin
-path_append /snap/bin
-
-#path_append /opt/nios2/bin
-#path_append /opt/nios2mmu/x86-linux2/bin
-#path_prepend /opt/codesourcery/nios2-4.1-211/bin
-#path_append /opt/codesourcery/arm-2010.09/bin
-#path_append /opt/coverity/bin
-#path_append /opt/linaro/gcc-linaro-arm-linux-gnueabihf/bin
-#path_append /opt/sourceryg++-2014.05/bin
 
 # vim:ft=zsh

@@ -2,7 +2,7 @@
 #
 # Set variables related to Python
 #
-# Copyright © 2014-2016 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2014-2021 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
@@ -11,5 +11,10 @@
 #[ -d $_PYTHON_USER ] && export PYTHONPATH=$_PYTHON_USER:$PYTHONPATH
 
 export PYTHONSTARTUP=$HOME/.pythonrc
+
+# see https://opensource.com/article/19/5/python-3-default-mac
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 # vim:ft=zsh

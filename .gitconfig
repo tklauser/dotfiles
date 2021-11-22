@@ -1,7 +1,7 @@
 [user]
 	name = Tobias Klauser
 	email = tklauser@distanz.ch
-	signingkey = B5510F47
+	signingkey = D1E0DA88E90F7E03B314C5D18A59A09E92628B77
 
 [core]
 	abbrev = 12
@@ -50,6 +50,9 @@
 
 [color "diff"]
 	whitespace = red reverse
+
+[commit]
+	gpgsign = true
 
 [fetch]
 	prune = true

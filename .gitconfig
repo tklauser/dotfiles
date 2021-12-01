@@ -68,6 +68,9 @@
 	prereleaseSuffix = -rc
 [http]
 	cookiefile = ~/.gitcookies
+[advice]
+        statusHints = false
+        skippedCherryPicks = false
 
 [remote "origin"]
 	prune = true

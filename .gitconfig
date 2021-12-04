@@ -63,6 +63,7 @@
 [stash]
 	showPatch = true
 [tag]
+	gpgsign = true
 	sort = version:refname
 [versionsort]
 	prereleaseSuffix = -rc

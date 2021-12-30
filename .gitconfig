@@ -88,5 +88,7 @@
 	path = ~/.config/git/cilium.io
 [includeIf "gitdir:**/linux/.git"]
 	path = ~/.config/git/with-signoff-hook
+[includeIf "gitdir:**/mold/.git"]
+	path = ~/.config/git/with-signoff-hook
 [includeIf "gitdir:**/netsniff-ng/.git"]
 	path = ~/.config/git/with-signoff-hook

@@ -88,6 +88,10 @@
 	path = ~/.config/git/isovalent.com
 [includeIf "gitdir:**/cilium/*/"]
 	path = ~/.config/git/cilium.io
+[includeIf "gitdir:**/golang.org/x/*/"]
+	path = ~/.config/git/golang.org
+[includeIf "gitdir:**/go/.git"]
+	path = ~/.config/git/golang.org
 [includeIf "gitdir:**/linux/.git"]
 	path = ~/.config/git/with-signoff-hook
 [includeIf "gitdir:**/mold/.git"]

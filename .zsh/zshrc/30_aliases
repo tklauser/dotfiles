@@ -50,7 +50,9 @@ alias qpylab='ipython qtconsole --ConsoleWidget.font_family="Inconsolata" --Cons
 
 # k8s
 alias k='kubectl'
+alias kw='kubectl -o wide'
 alias ks='kubectl -n kube-system'
+alias ksw='kubectl -n kube-system -o wide'
 
 # get top 10 shell commands
 alias top10='print -l ? ${(o)history%% *} | uniq -c | sort -nr | head -n 10'

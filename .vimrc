@@ -30,8 +30,8 @@ set pastetoggle=<F11>
 " Enable folding by fold markers
 set foldmethod=marker
 
-" Wrap line longer than the display
-"set wrap
+" Don't wrap line longer than the display
+set nowrap
 " Textwidth of 100
 set textwidth=100
 

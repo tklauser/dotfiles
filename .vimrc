@@ -208,7 +208,7 @@ Plug 'joestringer/cscope_maps'				" cscope maps
 Plug 'google/vim-searchindex'				" show how many times a search pattern occurs
 
 " fzf (https://github.com/junegunn/fzf.vim)
-Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()

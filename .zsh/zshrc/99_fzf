@@ -1,0 +1,15 @@
+# zshenv/99_fzf
+#
+# Set up fzf (https://github.com/junegunn/fzf)
+#
+# Copyright © 2022 Tobias Klauser <tklauser@distanz.ch>
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+path_append $HOME/.fzf/bin
+
+# Auto-completion
+[[ $- == *i* ]] && source "${HOME}/.fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+source "${HOME}/.fzf/shell/key-bindings.zsh"

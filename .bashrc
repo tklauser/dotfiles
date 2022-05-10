@@ -111,3 +111,5 @@ if [ -f $CARGO_ENV ]; then
 	. $CARGO_ENV
 fi
 source "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

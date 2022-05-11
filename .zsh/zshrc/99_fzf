@@ -6,10 +6,16 @@
 #
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
-path_append $HOME/.fzf/bin
+FZF="${HOME}/.fzf"
+# Installed using Homebrew
+[ -d $FZF ] || FZF="/usr/local/opt/fzf"
 
-# Auto-completion
-[[ $- == *i* ]] && source "${HOME}/.fzf/shell/completion.zsh" 2> /dev/null
+if [ -d $FZF ] ; then
+  path_append $FZF/bin
 
-# Key bindings
-source "${HOME}/.fzf/shell/key-bindings.zsh"
+  # Auto-completion
+  [[ $- == *i* ]] && source "${FZF}/shell/completion.zsh" 2> /dev/null
+
+  # Key bindings
+  source "${FZF}/shell/key-bindings.zsh"
+fi

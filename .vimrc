@@ -213,3 +213,6 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 " }}}
+" {{{ commands
+:command -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!"
+" }}}

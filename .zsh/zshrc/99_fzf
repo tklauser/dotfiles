@@ -9,6 +9,7 @@
 FZF="${HOME}/.fzf"
 # Installed using Homebrew
 [ -d $FZF ] || FZF="/usr/local/opt/fzf"
+[ -d $FZF ] || FZF="/opt/homebrew/opt/fzf"
 
 if [ -d $FZF ] ; then
   path_append $FZF/bin

@@ -16,14 +16,13 @@ if [ -d $_GOROOT ] ; then
   case "$arch" in
     x86_64) export GOARCH="amd64";;
     i*86)   export GOARCH="386";;
-    *)      export GOARCH="unsupported";;
+    arm64)  export GOARCH="arm64";;
   esac
 
   os="$(uname)"
   case "$os" in
     Linux)  export GOOS="linux";;
     Darwin) export GOOS="darwin";;
-    *)      export GOOS="unsupported";;
   esac
 
   path_prepend $_GOROOT/bin

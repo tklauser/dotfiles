@@ -1,0 +1,10 @@
+# zshenv/80_homebrew
+#
+# Set variables related to Homebrew
+#
+# Copyright © 2022 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

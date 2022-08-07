@@ -9,8 +9,10 @@
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
 fpath=($ZDOTDIR/func $fpath)
-
 # add custom completions
 fpath=($ZDOTDIR/completion $fpath)
+# add completitions for commands installed using homebrew
+_homebrew_completions=/opt/homebrew/share/zsh/site-functions
+[ -d $_homebrew_completions ] && fpath=($fpath $_homebrew_completions)
 
 # vim:ft=zsh

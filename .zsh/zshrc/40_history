@@ -8,7 +8,7 @@
 # Source repository: git://git.distanz.ch/dotfiles/zsh.git
 
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=5000
+HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 
 # append history list to the history file (think multiple zsh sessions)

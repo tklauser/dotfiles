@@ -9,4 +9,9 @@ if [ -f /usr/share/google-cloud-sdk/completion.zsh.inc ] ; then
   source /usr/share/google-cloud-sdk/completion.zsh.inc
 fi
 
+if [ -x $(which gke-gcloud-auth-plugin) ] ; then
+  # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+  export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+fi
+
 # vim:ft=zsh

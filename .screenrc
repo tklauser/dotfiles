@@ -4,10 +4,12 @@
 shell /bin/zsh
 startup_message off
 defutf8 on
+defencoding UTF-8
+bce on
+defbce on
+#term xterm-color
+setenv LANG en_GB.UTF-8
 autodetach on
-screen 0 irssi
-screen 1 mutt
-screen 2 vim
 
 # set status lines
 #caption always "%{bw}%w%{wk} %-77= %1`"
@@ -19,7 +21,6 @@ hardstatus string "%{wk}%H%{wk} | %{bw}%w%{wk} %-41= | %{rk}%l%{wk} | %{gk}%D %d
 #hardstatus alwayslastline "%{wr}%n%f %t %{kw} | %?%-Lw%?%{wb}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %{wk}"
 
 # keybindings
-bind i screen -t 'irssi'	0 irssi
 bind m screen -t 'mutt'		1 mutt
 bind v screen -t 'vim'		2 vim
 

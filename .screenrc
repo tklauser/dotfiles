@@ -1,0 +1,20 @@
+# .screenrc
+
+startup_message off
+defutf8 on
+autodetach on
+
+# set status lines
+#caption always "%{bw}%w%{wk} %-77= %1`"
+caption always "%{wk}%H%{wk} | %{bw}%w%{wk} %-41= | %{rk}%l%{wk} | %{gk}%D %d.%m.%Y %0c%{wk}"
+#caption always "%{+b bk}$USER@%{wk}%H%{gk} | %c %{yk}%D %d.%m.%Y | %{rk}(load: %l | cpu: %1` | acpi: %2`)"
+#caption always "%{+b bk}$USER%{wk}%H: screen%{gk} |%c %{yk}%d.%m.%Y | %{rk}(system load: %l)%-21=%{wk}%D %d.%m.%Y %0c"
+#caption always "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %{rw}%n%f %t %{bk} | %?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%? | %{rk} Load: %l %{wk}"
+#hardstatus alwayslastline "%{wr}%n%f %t %{kw} | %?%-Lw%?%{wb}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %{wk}"
+
+# keybindings
+bind i screen -t 'irssi'	0 irssi
+bind m screen -t 'mutt'		1 mutt
+bind v screen -t 'vim'		2 vim
+
+#bind p paste .

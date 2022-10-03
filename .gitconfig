@@ -1,0 +1,100 @@
+[user]
+	name = Tobias Klauser
+	email = tklauser@distanz.ch
+	signingkey = D1E0DA88E90F7E03B314C5D18A59A09E92628B77
+[core]
+	abbrev = 12
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore
+[init]
+	defaultBranch = main
+[alias]
+	amend = commit --amend --date=now
+	co = checkout
+	ca = commit --amend
+	ci = commit
+	br = branch
+	d = diff
+	dc = diff --cached
+	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"
+	ds = diff --stat
+	fixes = show --pretty=fixes -s
+	ll = log --decorate --graph --pretty=oneline
+	lp = log -p
+	ls = ls-files
+	pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pushf = push --force-with-lease
+	recent = branch --sort=-committerdate --format=\"%(committerdate:relative)%09%(refname:short)\"
+	ri = rebase --interactive --autosquash
+	s = status -s
+	st = status
+	today = commit --amend --date=now --no-edit
+	up = pull --rebase --autostash --prune origin master
+	cr = codereview
+	change = codereview change
+	gofmt = codereview gofmt
+	mail = codereview mail
+	pending = codereview pending
+	submit = codereview submit
+	sync = codereview sync
+[pretty]
+	fixes = Fixes: %h (\"%s\")
+	commit = %h (\"%s\")
+[color]
+	ui = true
+	diff = auto
+	branch = auto
+	status = auto
+[color "diff"]
+	whitespace = red reverse
+[commit]
+	gpgsign = true
+[fetch]
+	prune = true
+[push]
+	default = matching
+[pull]
+	ff = only
+[merge]
+	tool = vimdiff
+[grep]
+	lineNumber = true
+[sendemail]
+	suppresscc = self
+	bcc = Tobias Klauser <tklauser@distanz.ch>
+[stash]
+	showPatch = true
+[tag]
+	gpgsign = true
+	sort = version:refname
+[versionsort]
+	prereleaseSuffix = -rc
+[http]
+	cookiefile = ~/.gitcookies
+[advice]
+        statusHints = false
+        skippedCherryPicks = false
+
+[remote "origin"]
+	prune = true
+
+[includeIf "gitdir:**/cilium.io/.git"]
+	path = ~/.config/git/cilium.io
+[includeIf "gitdir:**/ebpf.io/.git"]
+	path = ~/.config/git/cilium.io
+[includeIf "gitdir:**/isovalent/*/"]
+	path = ~/.config/git/isovalent.com
+[includeIf "gitdir:**/covalentio/*/"]
+	path = ~/.config/git/isovalent.com
+[includeIf "gitdir:**/cilium/*/"]
+	path = ~/.config/git/cilium.io
+[includeIf "gitdir:**/golang.org/x/*/"]
+	path = ~/.config/git/golang.org
+[includeIf "gitdir:**/go/.git"]
+	path = ~/.config/git/golang.org
+[includeIf "gitdir:**/linux/.git"]
+	path = ~/.config/git/with-signoff-hook
+[includeIf "gitdir:**/mold/.git"]
+	path = ~/.config/git/with-signoff-hook
+[includeIf "gitdir:**/netsniff-ng/.git"]
+	path = ~/.config/git/with-signoff-hook

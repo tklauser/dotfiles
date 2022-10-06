@@ -1,0 +1,15 @@
+# zshenv/99_gcloud
+#
+# Copyright © 2022 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+path_append $HOME/google-cloud-sdk/bin
+
+if [ -x $(which gcloud) ] ; then
+  export CLOUDSDK_COMPUTE_REGION=europe-west6
+  export CLOUDSDK_COMPUTE_ZONE=europe-west6-b
+fi
+
+# vim:ft=zsh

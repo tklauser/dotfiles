@@ -7,7 +7,7 @@
 
 path_append $HOME/google-cloud-sdk/bin
 
-if [ -x $(which gcloud) ] ; then
+if [ -x "$(which gcloud)" ] ; then
   export CLOUDSDK_COMPUTE_REGION=europe-west6
   export CLOUDSDK_COMPUTE_ZONE=europe-west6-b
 fi

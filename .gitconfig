@@ -29,7 +29,7 @@
 	s = status -s
 	st = status
 	today = commit --amend --date=now --no-edit
-	up = pull --rebase --autostash --prune origin master
+	up = pull --rebase --autostash --prune origin main
 	cr = codereview
 	change = codereview change
 	gofmt = codereview gofmt

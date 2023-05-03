@@ -52,7 +52,7 @@
 [fetch]
 	prune = true
 [push]
-	default = matching
+	default = nothing
 [pull]
 	ff = only
 [merge]

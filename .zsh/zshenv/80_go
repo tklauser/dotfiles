@@ -41,7 +41,7 @@ alias gotip=$HOME/src/go/bin/go
 # https://github.com/maruel/panicparse#gotraceback
 export GOTRACEBACK=all
 
-# always use local Go toolchain
-export GOTOOLCHAIN=local
+# Alweays use Go toolchains from executable path
+export GOTOOLCHAIN=path
 
 # vim:ft=zsh

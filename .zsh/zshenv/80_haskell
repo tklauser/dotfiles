@@ -1,0 +1,13 @@
+# zshenv/80_haskell
+#
+# Set variables related to the Haskell programming language
+#
+# Copyright © 2024 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+#
+# Source repository: git://git.distanz.ch/dotfiles/zsh.git
+
+path_append $HOME/.cabal/bin
+path_append $HOME/.ghcup/bin
+
+# vim:ft=zsh

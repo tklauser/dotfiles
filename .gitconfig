@@ -49,6 +49,11 @@
 	whitespace = red reverse
 [commit]
 	gpgsign = true
+[diff]
+	renamelimit = 0
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
 [fetch]
 	prune = true
 [push]

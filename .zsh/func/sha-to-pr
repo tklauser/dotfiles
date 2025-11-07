@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+# Find out which PR introduced a particular commit
+
+if [ $# -ne 1 ]; then
+    >&2 echo "Usage: ${0##*/} <SHA>"
+    exit 1
+fi
+
+if ! type "gh" > /dev/null; then
+  >&2 echo "GitHub CLI (gh) is not installed, see https://github.com/cli/cli#installation for installation instructions"
+  exit 1
+fi
+
+SHA=$1
+
+# see gh pr list --help for JSON fields and gh help formatting for template formatting options
+gh pr list --search ${SHA} --state merged --json title,url,mergedAt --template \
+	'{{range .}}{{.url}} {{.title | autocolor "green"}} (merged {{(timeago .mergedAt)}}){{"\n"}}{{end}}'

@@ -1,0 +1,37 @@
+[DEFAULT]
+include = cat $HOME/src/mr/lib/*
+
+[src/dotfiles/dotfiles.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles.git' 'dotfiles.git' '../../../'
+
+[src/dotfiles/git.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
+
+[src/dotfiles/mailfilter.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/mailfilter.git' 'mailfilter.git' '../../../'
+
+[src/dotfiles/mr.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/mr.git' 'mr.git' '../../../'
+
+[src/dotfiles/mutt.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/mutt.git' 'mutt.git' '../../../'
+
+[src/dotfiles/screen.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/screen.git' 'screen.git' '../../../'
+
+[src/dotfiles/sigs.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/sigs.git' 'sigs.git' '../../../'
+
+[src/dotfiles/ssh.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/ssh.git' 'ssh.git' '../../../'
+
+[src/dotfiles/vim.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/vim.git' 'vim.git' '../../../'
+
+[src/dotfiles/xsession.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/xsession.git' 'xsession.git' '../../../'
+
+[src/dotfiles/zsh.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/zsh.git' 'zsh.git' '../../../'
+
+# vim:tw=0

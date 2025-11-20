@@ -1,6 +1,9 @@
 [DEFAULT]
 include = cat $HOME/src/mr/lib/*
 
+[src/dotfiles/dotfiles.git]
+checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles.git' 'dotfiles.git' '../../../'
+
 [src/dotfiles/git.git]
 checkout = git_fake_bare_checkout 'git+ssh://tklauser@git.distanz.ch/home/tklauser/scm/dotfiles/git.git' 'git.git' '../../../'
 

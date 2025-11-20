@@ -1,0 +1,10 @@
+theme = "solarized_dark"
+
+[editor]
+cursorline = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace]
+render = "all"

@@ -17,8 +17,10 @@ zstyle :compinstall filename "$ZDOTDIR/zshrc/20_compsys"
 autoload -Uz compinit
 compinit -d $ZVARDIR/comp-$HOST
 
+zmodload -a autocomplete
+
 # load fancy completion list and menu handler
-zmodload zsh/complist
+zmodload -a complist
 
 # avoid old-style completion (compctl)
 zstyle ':completion:*' use-compctl false

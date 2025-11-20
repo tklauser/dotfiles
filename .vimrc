@@ -205,6 +205,7 @@ Plug 'tpope/vim-rhubarb'				" GitHub integration
 Plug 'tpope/vim-commentary'				" comment out stuff
 Plug 'joestringer/cscope_maps'				" cscope maps
 Plug 'google/vim-searchindex'				" show how many times a search pattern occurs
+Plug 'twpayne/vim-testscript'                           " Syntax highlighting for Go testscript
 
 " fzf (https://github.com/junegunn/fzf.vim)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

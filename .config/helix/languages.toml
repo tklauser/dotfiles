@@ -2,3 +2,15 @@
 name = "go"
 auto-format = true
 formatter = { command = "goimports" }
+
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "c"
+indent = { tab-width = 8, unit = "\t" }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 8, unit = "\t" }

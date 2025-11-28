@@ -216,3 +216,6 @@ call plug#end()
 " {{{ commands
 :command -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!"
 " }}}
+
+" https://github.com/junegunn/fzf/issues/453#issuecomment-166648024
+nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"

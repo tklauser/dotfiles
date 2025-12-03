@@ -1,9 +1,9 @@
-# Set up tools related to Python
+# Set up tools related to nodejs
 #
-# Copyright © 2014-2022 Tobias Klauser <tklauser@distanz.ch>
+# Copyright © 2025 Tobias Klauser <tklauser@distanz.ch>
 # Released under the terms of the Artistic Licence 2.0
 
-if [ -d "$HOME/.nvm" ]
+if [ -d "$HOME/.nvm" ] ; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

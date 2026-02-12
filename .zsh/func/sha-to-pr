@@ -1,19 +1,46 @@
 #!/bin/zsh
 
-# Find out which PR introduced a particular commit
+# Find out which PR introduced a particular commit.
+#
+# Copyright © 2026 Tobias Klauser <tklauser@distanz.ch>
+# Released under the terms of the Artistic Licence 2.0
+
+local OPEN_IN_BROWSER=0
+
+if [ "$1" = "-o" ] || [ "$1" = "--open" ]; then
+  OPEN_IN_BROWSER=1
+  shift
+fi
 
 if [ $# -ne 1 ]; then
-    >&2 echo "Usage: ${0##*/} <SHA>"
-    exit 1
+  >&2 echo "Usage: ${0##*/} [-o|--open] <SHA>"
+  return 1
 fi
 
 if ! type "gh" > /dev/null; then
   >&2 echo "GitHub CLI (gh) is not installed, see https://github.com/cli/cli#installation for installation instructions"
-  exit 1
+  return 1
 fi
 
-SHA=$1
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+  >&2 echo "Not in a git repository"
+  return 1
+fi
+
+local SHA=$1
 
 # see gh pr list --help for JSON fields and gh help formatting for template formatting options
-gh pr list --search ${SHA} --state merged --json title,url,mergedAt --template \
+gh pr list --search "${SHA}" --state merged --json title,url,mergedAt --template \
 	'{{range .}}{{.url}} {{.title | autocolor "green"}} (merged {{(timeago .mergedAt)}}){{"\n"}}{{end}}'
+
+if [ ${OPEN_IN_BROWSER} -eq 1 ]; then
+  local URLS
+  URLS=$(gh pr list --search "${SHA}" --state merged --json url --template '{{range .}}{{.url}}{{"\n"}}{{end}}')
+  if [ -z "${URLS}" ]; then
+    >&2 echo "No merged PR found for ${SHA}"
+    return 1
+  fi
+  for url in ${(f)URLS}; do
+    gh pr view --web "${url}"
+  done
+fi

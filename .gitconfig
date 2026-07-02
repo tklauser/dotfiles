@@ -14,7 +14,7 @@
 	co = checkout
 	ca = commit --amend
 	ci = commit
-	br = branch
+	br = branch --format='%(HEAD) %(align:55,left)%(color:yellow)%(refname:short)%(color:reset)%(end) %(align:30,left)%(color:green)%(committerdate:relative)%(color:reset)%(end) %(align:30,left)%(color:blue)%(authorname)%(color:reset)%(end) %(contents:subject)'
 	d = diff
 	dc = diff --cached
 	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"

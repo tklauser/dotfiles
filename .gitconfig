@@ -19,6 +19,7 @@
 	dc = diff --cached
 	dist = "!git archive --format=tar -v --prefix=$(git describe HEAD)/ $(git describe HEAD) | bzip2 -9v > ../$(git describe HEAD).tar.bz2"
 	ds = diff --stat
+	fbr = "!git br | grep -v '^*' | fzf --height=25% --reverse --info=inline | awk '{print $1}' | xargs git checkout"
 	fixes = show --pretty=fixes -s
 	ll = log --decorate --graph --pretty=oneline
 	lp = log -p
